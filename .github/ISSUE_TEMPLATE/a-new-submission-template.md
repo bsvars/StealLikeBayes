@@ -26,20 +26,29 @@ Cheers, Tomasz
 
 ## To-do list
 
+- [ ] Fork the repository [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
 - [ ] Include your **C++** file, `src/[main_routine].cpp`, named after the main routine/function you're contributing called `[main_routine]`.
-  - [ ] Acknowlegde the authorship of the source code in this file in line with its licence requirements.
-  - [ ] Export all **C++** functions by including **Rcpp** directives `// [[Rcpp::interfaces(cpp)]]` and 
-`// [[Rcpp::export]]`.
+  - [ ] Acknowledge the authorship of the source code in this file in line with its licence requirements.
+  - [ ] Export all **C++** functions by including **Rcpp** directives `// [[Rcpp::interfaces(cpp)]]` and `// [[Rcpp::export]]`.
   - [ ] Write and **R** wrapper only for the main function you contribute.
 - [ ] Include the corresponding **C++** header file, `src/[main_routine].h` with all your **C++** functions.
-- Include one **R** file with a wrapper for your main **C++** function, `R/[main_routine].R`.
+- [ ] Include one **R** file with a wrapper for your main **C++** function, `R/[main_routine].R`.
   - [ ] This function must include argument type checks using `stopifnot()`.
   - [ ] Include full documentation using **roxygen2** that must have all necessary elements including:
-    - [ ] the descripion of arguments and values, also descripbed in terms of the **C++** objects,
-    - [ ] the acknowledgement of the original code authorship in `@details` with explicit references to the **R** package where the original code comes from listed in `@references`, and to the package defining the class of **C++** inputs and outputs,
-    - [ ] your authorship acknowledgment in section `@authors`,
-    - [ ] an example of the **R** function use in `@examples`.
+  - [ ] the description of arguments and values, also described in terms of the **C++** objects,
+  - [ ] the acknowledgement of the original code authorship in `@details` with explicit references to the **R** package where the original code comes from listed in `@references`, and to the package defining the class of **C++** inputs and outputs,
+  - [ ] your authorship acknowledgement in section `@authors`,
+  - [ ] an example of the **R** function use in `@examples`.
 - [ ] Include an **R** file with tests of your contributed **R** function, `inst/tinytest/[main_routine].R`,
 - [ ] Update on dependencies in `DESCRIPTION` and `R/StealLikeBayes-package.R`.
 - [ ] Update on your authorship in `DESCRIPTION`, using `person()`. In `comment` include your `ORCID` and `contributions`, for instance `contributions = "contributions: [main_routine]"`.
 - [ ] Update the `NEWS.md` by providing the `[main_routine]`, your GitHub profile login, and a link to this issue.
+- [ ] Push your commits linking them all to your issue by including the hash tag of your issue.
+- [ ] Run checks of the package locally. They all need to pass!
+```
+Rcpp::compileAttributes()
+devtools::document()
+devtools::check()
+```
+- [ ] Submit your Pull Request.
+- [ ] Respond to all the comments from the maintainer.
