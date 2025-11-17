@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2025-11-17T07:47Z
+last_built: 2025-11-17T11:19Z
 urls:
   reference: http://bsvars.org/StealLikeBayes/reference
   article: http://bsvars.org/StealLikeBayes/articles
