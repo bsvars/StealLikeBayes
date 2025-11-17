@@ -5,17 +5,17 @@
 \title{Samples random draws from a multivariate normal distribution using the 
 precision sampler by Chan & Jeliazkov (2009)}
 \usage{
-rnorm1_precision_sampler(precision_diag, precision_offdiag, location)
+rnorm1_precision_sampler(location, precision_diag, precision_offdiag)
 }
 \arguments{
+\item{location}{an \eqn{N}-vector with the location parameter \eqn{L}. 
+\bold{C++}: an \code{arma:vec} vector object.}
+
 \item{precision_diag}{an \eqn{N}-vector with the diagonal elements of the 
 precision matrix \eqn{P}. \bold{C++}: an \code{arma:vec} vector object.}
 
 \item{precision_offdiag}{a numeric scalar with the off-diagonal element of 
 the precision matrix \eqn{P}. \bold{C++}: a \code{double} scalar.}
-
-\item{location}{an \eqn{N}-vector with the location parameter \eqn{L}. 
-\bold{C++}: an \code{arma:vec} vector object.}
 }
 \value{
 an \eqn{N}-vector with random draws from the multivariate normal 
@@ -41,6 +41,10 @@ by Hosszejni & Kastner (2025) and Kastner G. (2016) and is using
 objects and commands from the \pkg{armadillo} library by Sanderson & Curtin (2025)
 thanks to the \pkg{RcppArmadillo} package by Eddelbuettel, Francois, Bates, 
 Ni, & Sanderson (2025)
+}
+\examples{
+rnorm1_precision_sampler(rep(0, 100), rep(1, 100), -0.5)
+
 }
 \references{
 Chan J.C.C., Jeliazkov I. (2009). Efficient simulation and integrated 
