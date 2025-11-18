@@ -26,7 +26,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: rnorm1_precision_sampler)
+\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: rnorm1_precision_sampler, rgennorm)
 
 Authors:
 \itemize{

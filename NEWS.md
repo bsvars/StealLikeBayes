@@ -6,5 +6,6 @@ Now, you can as well StealLikeBayes*! * - We don't actually steal anything or cl
 
 # StealLikeBayes 0.1
 
-1. `rnorm1_precision_sampler` provided by [@donotdespair](https://github.com/donotdespair) [#](https://github.com/bsvars/StealLikeBayes/issues/1)
+1. `rnorm1_precision_sampler` provided by [@donotdespair](https://github.com/donotdespair) [#1](https://github.com/bsvars/StealLikeBayes/issues/1)
+2. `rgennorm` provided by [@donotdespair](https://github.com/donotdespair) [#5](https://github.com/bsvars/StealLikeBayes/issues/5)
 3. `rhaar1` provided by [@adamwang15](https://github.com/adamwang15) [#6](https://github.com/bsvars/StealLikeBayes/issues/6)

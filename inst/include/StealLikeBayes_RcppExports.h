@@ -25,6 +25,90 @@ namespace StealLikeBayes {
         }
     }
 
+    inline arma::mat orthogonal_complement_matrix_TW(const arma::mat& x) {
+        typedef SEXP(*Ptr_orthogonal_complement_matrix_TW)(SEXP);
+        static Ptr_orthogonal_complement_matrix_TW p_orthogonal_complement_matrix_TW = NULL;
+        if (p_orthogonal_complement_matrix_TW == NULL) {
+            validateSignature("arma::mat(*orthogonal_complement_matrix_TW)(const arma::mat&)");
+            p_orthogonal_complement_matrix_TW = (Ptr_orthogonal_complement_matrix_TW)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_orthogonal_complement_matrix_TW");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_orthogonal_complement_matrix_TW(Shield<SEXP>(Rcpp::wrap(x)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::mat >(rcpp_result_gen);
+    }
+
+    inline arma::rowvec normalisation_wz2003_s(const arma::mat& B, const arma::mat& B_hat_inv, const arma::mat& Sigma_inv, const arma::mat& diag_signs) {
+        typedef SEXP(*Ptr_normalisation_wz2003_s)(SEXP,SEXP,SEXP,SEXP);
+        static Ptr_normalisation_wz2003_s p_normalisation_wz2003_s = NULL;
+        if (p_normalisation_wz2003_s == NULL) {
+            validateSignature("arma::rowvec(*normalisation_wz2003_s)(const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&)");
+            p_normalisation_wz2003_s = (Ptr_normalisation_wz2003_s)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_normalisation_wz2003_s");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_normalisation_wz2003_s(Shield<SEXP>(Rcpp::wrap(B)), Shield<SEXP>(Rcpp::wrap(B_hat_inv)), Shield<SEXP>(Rcpp::wrap(Sigma_inv)), Shield<SEXP>(Rcpp::wrap(diag_signs)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::rowvec >(rcpp_result_gen);
+    }
+
+    inline arma::cube normalisation_wz2003(arma::cube& posterior_B, const arma::mat& B_hat) {
+        typedef SEXP(*Ptr_normalisation_wz2003)(SEXP,SEXP);
+        static Ptr_normalisation_wz2003 p_normalisation_wz2003 = NULL;
+        if (p_normalisation_wz2003 == NULL) {
+            validateSignature("arma::cube(*normalisation_wz2003)(arma::cube&,const arma::mat&)");
+            p_normalisation_wz2003 = (Ptr_normalisation_wz2003)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_normalisation_wz2003");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_normalisation_wz2003(Shield<SEXP>(Rcpp::wrap(posterior_B)), Shield<SEXP>(Rcpp::wrap(B_hat)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::cube >(rcpp_result_gen);
+    }
+
+    inline arma::cube rgennorm(const int n, arma::mat& X, const arma::cube& S_inv, const int& nu, const arma::field<arma::mat>& V, const bool normalise = true) {
+        typedef SEXP(*Ptr_rgennorm)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_rgennorm p_rgennorm = NULL;
+        if (p_rgennorm == NULL) {
+            validateSignature("arma::cube(*rgennorm)(const int,arma::mat&,const arma::cube&,const int&,const arma::field<arma::mat>&,const bool)");
+            p_rgennorm = (Ptr_rgennorm)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rgennorm");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rgennorm(Shield<SEXP>(Rcpp::wrap(n)), Shield<SEXP>(Rcpp::wrap(X)), Shield<SEXP>(Rcpp::wrap(S_inv)), Shield<SEXP>(Rcpp::wrap(nu)), Shield<SEXP>(Rcpp::wrap(V)), Shield<SEXP>(Rcpp::wrap(normalise)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::cube >(rcpp_result_gen);
+    }
+
     inline Rcpp::List cholesky_tridiagonal(const arma::vec& omega_diag, const double& omega_offdiag) {
         typedef SEXP(*Ptr_cholesky_tridiagonal)(SEXP,SEXP);
         static Ptr_cholesky_tridiagonal p_cholesky_tridiagonal = NULL;
