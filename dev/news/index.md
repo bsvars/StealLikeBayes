@@ -15,3 +15,5 @@ anything or claim Rev. Thomas Bayes did.
 2.  `rgennorm` provided by
     [@donotdespair](https://github.com/donotdespair)
     [\#5](https://github.com/bsvars/StealLikeBayes/issues/5)
+3.  `rhaar1` provided by [@adamwang15](https://github.com/adamwang15)
+    [\#6](https://github.com/bsvars/StealLikeBayes/issues/6)

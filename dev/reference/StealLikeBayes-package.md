@@ -24,3 +24,9 @@ Useful links:
 **Maintainer**: Tomasz Woźniak <wozniak.tom@pm.me>
 ([ORCID](https://orcid.org/0000-0003-2212-2378)) (contributions:
 rnorm1_precision_sampler, rgennorm)
+
+Authors:
+
+- Xiaolei Wang <adamwang15@gmail.com>
+  ([ORCID](https://orcid.org/0009-0005-6192-9061)) (contributions:
+  rhaar1)
