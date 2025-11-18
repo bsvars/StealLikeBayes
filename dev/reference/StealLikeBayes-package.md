@@ -23,4 +23,4 @@ Useful links:
 
 **Maintainer**: Tomasz Woźniak <wozniak.tom@pm.me>
 ([ORCID](https://orcid.org/0000-0003-2212-2378)) (contributions:
-rnorm1_precision_sampler)
+rnorm1_precision_sampler, rgennorm)

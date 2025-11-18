@@ -11,4 +11,7 @@ anything or claim Rev. Thomas Bayes did.
 
 1.  `rnorm1_precision_sampler` provided by
     [@donotdespair](https://github.com/donotdespair)
-    [\#](https://github.com/bsvars/StealLikeBayes/issues/1)
+    [\#1](https://github.com/bsvars/StealLikeBayes/issues/1)
+2.  `rgennorm` provided by
+    [@donotdespair](https://github.com/donotdespair)
+    [\#5](https://github.com/bsvars/StealLikeBayes/issues/5)
