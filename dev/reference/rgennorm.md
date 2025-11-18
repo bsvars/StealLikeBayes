@@ -6,11 +6,11 @@ row-by-row from their full conditional distributions using the Gibbs
 sampler by Waggoner & Zha (2003a). The density is proportional to
 \$\$det(X)^{\nu -
 N}\exp(-\frac{1}{2}\sum\_{n=1}^{N}x_nV_nS_nV_n'x_n')\$\$ specified by
-the \\N\times N\\ scale matrices \\S+n\\, a positive scalar-valued shape
+the \\N\times N\\ scale matrices \\S_n\\, a positive scalar-valued shape
 parameter \\\nu\\, and \\r_n\times N\\ selection matrices \\V_n\\
 defining the restrictions. Zero restrictions may be imposed on th \\X\\
 matrix row-by-row as \$\$X\_{n.} = x_nV_n\$\$ where \\1\times r_n\\
-vectors \\x_n\\ collect the unrestricted elements of \\X\\ and the
+vectors \\x_n\\ collect the unrestricted elements of \\X\_{n.}\\ and the
 matrices \\V_n\\ place them in appropriate spots of the \\1\times N\\
 row \\X\_{n.}\\. The output may be normalised using the method by
 Waggoner & Zha (2003b) ensuring positive diagonal elements of the output
