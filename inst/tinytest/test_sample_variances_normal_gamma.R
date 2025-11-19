@@ -25,3 +25,4 @@ expect_error(
   sample_variances_normal_gamma(rep(1,2), rep(0,2), -1, rep(1,2), 1, 1, TRUE, 1e-6),
   info = "sample_variances_normal_gamma: wrong third argument."
 )
+

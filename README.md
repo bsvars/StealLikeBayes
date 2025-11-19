@@ -150,8 +150,14 @@ That’s simple!
 
 ## Installation
 
+You can install the **StealLikeBayes** package by running:
+
+``` r
+install_packages("StealLikeBayes")
+```
+
 You can install the development version of **StealLikeBayes** like so:
 
 ``` r
-devtools::install_github("bsvars/StealLikeBayes)
+devtools::install_github("bsvars/StealLikeBayes")
 ```
