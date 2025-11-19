@@ -1,8 +1,8 @@
 # Sample random matrices from Haar distribution
 
 This function samples random orthogonal matrices from the Haar
-distribution, i.e. the uniform distribution over the space of orthogonal
-matrices.
+distribution, that is, the uniform distribution over the space of
+orthogonal matrices.
 
 ## Usage
 
@@ -20,7 +20,7 @@ rhaar1(n)
 ## Value
 
 An \\n\times n\\ matrix with a random draw of the orthogonal matrix from
-the Haar distribution. **C++**: an `arma:mat` object.
+the Haar distribution. **C++**: an `arma::mat` object.
 
 ## Details
 
@@ -31,6 +31,16 @@ RcppArmadillo package by Eddelbuettel, Francois, Bates, Ni, & Sanderson
 (2025)
 
 ## References
+
+Eddelbuettel D., Francois R., Bates D., Ni B., Sanderson C. (2025).
+RcppArmadillo: 'Rcpp' Integration for the 'Armadillo' Templated Linear
+Algebra Library. R package version 15.0.2-2.
+\<doi:10.32614/CRAN.package.RcppArmadillo\>
+
+Sanderson C., Curtin R. (2025). Armadillo: An Efficient Framework for
+Numerical Linear Algebra. International Conference on Computer and
+Automation Engineering, 303-307,
+\<doi:10.1109/ICCAE64891.2025.10980539\>
 
 Stewart, G. W. (1980). The efficient generation of random orthogonal
 matrices with an application to condition estimators. SIAM Journal on
