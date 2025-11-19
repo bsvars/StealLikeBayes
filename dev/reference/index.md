@@ -10,3 +10,6 @@
 - [`rnorm1_precision_sampler()`](http://bsvars.org/StealLikeBayes/dev/reference/rnorm1_precision_sampler.md)
   : Samples random draws from a multivariate normal distribution using
   the precision sampler by Chan & Jeliazkov (2009)
+- [`sample_variances_horseshoe()`](http://bsvars.org/StealLikeBayes/dev/reference/sample_variances_horseshoe.md)
+  : Samples variances from the horseshoe prior using Gruber & Kastner
+  (2024)

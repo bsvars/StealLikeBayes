@@ -30,3 +30,7 @@ Authors:
 - Xiaolei Wang <adamwang15@gmail.com>
   ([ORCID](https://orcid.org/0009-0005-6192-9061)) (contributions:
   rhaar1)
+
+- Longcan Li <longcando@outlook.com>
+  ([ORCID](https://orcid.org/0009-0007-2190-768X)) (contributions:
+  sample_variances_horseshoe)

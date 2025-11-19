@@ -9,15 +9,18 @@
 - **Xiaolei Wang**. Author. [](https://orcid.org/0009-0005-6192-9061)  
   contributions: rhaar1
 
+- **Longcan Li**. Author. [](https://orcid.org/0009-0007-2190-768X)  
+  contributions: sample_variances_horseshoe
+
 ## Citation
 
-Woźniak T, Wang X (2025). *StealLikeBayes: A C++ compendium of Bayesian
-statistical routines for R packages*. R package version 0.1.0.9000,
-<http://bsvars.org/StealLikeBayes/>.
+Woźniak T, Wang X, Li L (2025). *StealLikeBayes: A C++ compendium of
+Bayesian statistical routines for R packages*. R package version
+0.1.0.9000, <http://bsvars.org/StealLikeBayes/>.
 
     @Manual{,
       title = {StealLikeBayes: A C++ compendium of Bayesian statistical routines for R packages},
-      author = {Tomasz Woźniak and Xiaolei Wang},
+      author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li},
       year = {2025},
       note = {R package version 0.1.0.9000},
       url = {http://bsvars.org/StealLikeBayes/},

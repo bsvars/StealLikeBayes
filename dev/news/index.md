@@ -17,3 +17,6 @@ anything or claim Rev. Thomas Bayes did.
     [\#5](https://github.com/bsvars/StealLikeBayes/issues/5)
 3.  `rhaar1` provided by [@adamwang15](https://github.com/adamwang15)
     [\#6](https://github.com/bsvars/StealLikeBayes/issues/6)
+4.  `sample_variances_horseshoe` provided by
+    [@longcando](https://github.com/Longcando)
+    [\#6](https://github.com/bsvars/StealLikeBayes/issues/9)
