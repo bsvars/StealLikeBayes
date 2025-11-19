@@ -1,6 +1,6 @@
 Package: StealLikeBayes
 Type: Package
-Title: A C++ compendium of Bayesian statistical routines for R packages
+Title: A C++ Compendium of Bayesian Statistical Routines for R Packages
 Version: 1.0
 Date: 2025-11-19
 Maintainer: Tomasz Woźniak <wozniak.tom@pm.me>
@@ -64,12 +64,9 @@ Description:
   licence, fully acknowledging the authorship of the original code.
 Imports: 
   Rcpp (>= 1.1.0)
-Depends: 
-  shrinkTVP
 LinkingTo: 
   Rcpp, 
-  RcppArmadillo,
-  shrinkTVP
+  RcppArmadillo
 Suggests: 
   tinytest
 URL: https://bsvars.org/StealLikeBayes/

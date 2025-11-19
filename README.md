@@ -1,7 +1,7 @@
 
 # StealLikeBayes <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
-A **C++** compendium of Bayesian statistical routines for **R** packages
+A **C++** Compendium of Bayesian Statistical Routines for **R** Packages
 
 <!-- badges: start -->
 
