@@ -34,7 +34,8 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
   - one **R** file with a wrapper for your main **C++** function,
     `R/*.R` with full documentation and acknowledgement of the original
     code authorship,
-  - one **R** file with tests of your function, `inst/tinytest/*.R`,
+  - one **R** file with tests of your function,
+    `inst/tinytest/test_*.R`,
   - Updates on dependencies in `DESCRIPTION` and
     `R/StealLikeBayes-package.R`,
   - updates on your authorship in `DESCRIPTION`.
@@ -88,7 +89,7 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
   - [ ] your authorship acknowledgement in section `@authors`,
   - [ ] an example of the **R** function use in `@examples`.
 - [ ] Include an **R** file with tests of your contributed **R**
-  function, `inst/tinytest/[main_routine].R`,
+  function, `inst/tinytest/test_[main_routine].R`,
 - [ ] Update on dependencies in `DESCRIPTION` and
   `R/StealLikeBayes-package.R`.
 - [ ] Update on your authorship in `DESCRIPTION`, using `person()`. In

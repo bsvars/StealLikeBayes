@@ -20,7 +20,7 @@ Cheers, Tomasz
   - one **C++** file, `src/*.cpp`
   - the corresponding **C++** header file, `src/*.h`
   - one **R** file with a wrapper for your main **C++** function, `R/*.R` with full documentation and acknowledgement of the original code authorship,
-  - one **R** file with tests of your function, `inst/tinytest/*.R`,
+  - one **R** file with tests of your function, `inst/tinytest/test_*.R`,
   - Updates on dependencies in `DESCRIPTION` and `R/StealLikeBayes-package.R`,
   - updates on your authorship in `DESCRIPTION`.
 
@@ -39,7 +39,7 @@ Cheers, Tomasz
   - [ ] the acknowledgement of the original code authorship in `@details` with explicit references to the **R** package where the original code comes from listed in `@references`, and to the package defining the class of **C++** inputs and outputs,
   - [ ] your authorship acknowledgement in section `@authors`,
   - [ ] an example of the **R** function use in `@examples`.
-- [ ] Include an **R** file with tests of your contributed **R** function, `inst/tinytest/[main_routine].R`,
+- [ ] Include an **R** file with tests of your contributed **R** function, `inst/tinytest/test_[main_routine].R`,
 - [ ] Update on dependencies in `DESCRIPTION` and `R/StealLikeBayes-package.R`.
 - [ ] Update on your authorship in `DESCRIPTION`, using `person()`. In `comment` include your `ORCID` and `contributions`, for instance `contributions = "contributions: [main_routine]"`.
 - [ ] Update the `NEWS.md` by providing the `[main_routine]`, your GitHub profile login, and a link to this issue.

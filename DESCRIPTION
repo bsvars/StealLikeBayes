@@ -26,6 +26,16 @@ Authors@R: c(
       )
     ),
     person(
+      "Longcan",
+      "Li",,
+      "longcando@outlook.com", 
+      role = c("aut"),
+      comment = c(
+        ORCID = "0009-0007-2190-768X", 
+        contributions = "contributions: sample_variances_horseshoe"
+      )
+    ),
+    person(
       "Jianying Shelly", 
       "Xie",, 
       "shellyyinggxie@gmail.com", 

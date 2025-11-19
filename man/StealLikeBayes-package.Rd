@@ -31,6 +31,7 @@ Useful links:
 Authors:
 \itemize{
   \item Xiaolei Wang \email{adamwang15@gmail.com} (\href{https://orcid.org/0009-0005-6192-9061}{ORCID}) (contributions: rhaar1)
+  \item Longcan Li \email{longcando@outlook.com} (\href{https://orcid.org/0009-0007-2190-768X}{ORCID}) (contributions: sample_variances_horseshoe)
   \item Jianying Shelly Xie \email{shellyyinggxie@gmail.com} (\href{https://orcid.org/0009-0008-6451-6416}{ORCID}) (contributions: sample_variances_normal_gamma)
 }
 
