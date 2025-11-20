@@ -1,22 +1,7 @@
-
-#include <RcppArmadillo.h>
+#include "sample_variances_normal_gamma.h"
 
 using namespace arma;
 using namespace Rcpp;
-
-
-
-
-/* This function was stolen by Shelly Xie from bayesianVARs package by Luis Gruber and Gregor Kastner
- *  on 19 November 2025 and then rewritten.
- */
-double do_rgig(double lambda, double chi, double psi) {
-  
-  SEXP (*fun)(int, double, double, double) = NULL;
-  if (!fun) fun = (SEXP(*)(int, double, double, double)) R_GetCCallable("GIGrvg", "do_rgig");
-  
-  return as<double>(fun(1, lambda, chi, psi));
-}
 
 
 /* This function was stolen by Shelly Xie from bayesianVARs package by Luis Gruber and Gregor Kastner
@@ -34,7 +19,7 @@ arma::vec sample_variances_normal_gamma(
     const double varrho0, 
     const double varrho1, 
     const bool hyper, 
-    const double tol = 1e-6
+    const double tol
 ){
   const int N = x.n_elem;
   vec V_i(N);
@@ -46,7 +31,7 @@ arma::vec sample_variances_normal_gamma(
   
   arma::uvec::iterator it;
   for(it = ind.begin(); it != ind.end(); ++it){
-    theta_tilde(*it) = do_rgig(a-0.5, x(*it)*x(*it), a/zeta);
+    theta_tilde(*it) = REAL(do_rgig(1, a-0.5, x(*it)*x(*it), a/zeta))[0];
     if(hyper){
       for(int i=0; i<gridlength; ++i){
         logprobs(i) += R::dgamma(theta_tilde(*it),a_vec(i), 2*zeta/a_vec(i), true); // scale!!!

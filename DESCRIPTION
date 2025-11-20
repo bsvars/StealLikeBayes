@@ -63,10 +63,12 @@ Description:
   claim that Thomas Bayes did, but copy code that is compatible with our GPL 3 
   licence, fully acknowledging the authorship of the original code.
 Imports: 
-  Rcpp (>= 1.1.0)
+    GIGrvg,
+    Rcpp (>= 1.1.0)
 LinkingTo: 
-  Rcpp, 
-  RcppArmadillo
+  Rcpp,
+  RcppArmadillo,
+  GIGrvg
 Suggests: 
   tinytest
 URL: https://bsvars.org/StealLikeBayes/

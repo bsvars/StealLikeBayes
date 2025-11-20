@@ -1,3 +1,5 @@
 
+GIGRVG_DLL = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript" -e "cat(system.file('libs', package='GIGrvg'))")
+
 PKG_CXXFLAGS = $(SHLIB_OPENMP_CXXFLAGS)
-PKG_LIBS = $(SHLIB_OPENMP_CXXFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+PKG_LIBS = $(SHLIB_OPENMP_CXXFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -L"$(GIGRVG_DLL)$(R_ARCH)" -lGIGrvg
