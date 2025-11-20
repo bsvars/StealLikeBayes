@@ -116,5 +116,7 @@ Jianying Shelly Xie <shellyyinggxie@gmail.com>
 
 ``` r
 sample_variances_normal_gamma(rep(0,2), rep(1,2), 1, 1, rep(1,2), 1, 1, TRUE, 1e-6)
-#> Error in sample_variances_normal_gamma(rep(0, 2), rep(1, 2), 1, 1, rep(1,     2), 1, 1, TRUE, 1e-06): function 'do_rgig' not provided by package 'GIGrvg'
+#>          [,1]
+#> [1,] 2.129573
+#> [2,] 4.068682
 ```
