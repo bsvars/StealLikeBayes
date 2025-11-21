@@ -68,6 +68,7 @@
 <ul>
 <li>We only accept code from packages and repositories with compatible licences. If you are contributing code from a package distributed under <strong>GPL 3</strong> you’re good. Otherwise, you must argue the licence compatibility.</li>
 <li>Fully acknowledge the source of the contributed code in the file with your code and documentation.</li>
+<li>Once you contribute, we might reach out later for you to join the authors of a paper to be published on the basis of this package.</li>
 <li>Provide one Bayesian statistical routine per submission.</li>
 <li>Your submission must consist of:
 <ul>
@@ -77,8 +78,8 @@
 </li>
 <li>one <strong>R</strong> file with a wrapper for your main <strong>C++</strong> function, <code>R/*.R</code> with full documentation and acknowledgement of the original code authorship,</li>
 <li>one <strong>R</strong> file with tests of your function, <code>inst/tinytest/test_*.R</code>,</li>
-<li>Updates on dependencies in <code>DESCRIPTION</code> and <code>R/StealLikeBayes-package.R</code>,</li>
-<li>updates on your authorship in <code>DESCRIPTION</code>.</li>
+<li>updates on your authorship in <code>DESCRIPTION</code>,</li>
+<li>if required, updates on dependencies in <code>DESCRIPTION</code> and <code>R/StealLikeBayes-package.R</code>.</li>
 </ul>
 </li>
 </ul>
@@ -90,52 +91,12 @@
 <li><label><input type="checkbox">Open an issue by clicking <em>New issue</em> &gt;&gt; <em>A new submission template</em>.</label></li>
 <li><label><input type="checkbox">Fork the repository <a href="https://github.com/bsvars/StealLikeBayes" class="external-link">bsvars/StealLikeBayes</a>.</label></li>
 <li><label><input type="checkbox">Follow the instructions from the issue.</label></li>
-<li><label><input type="checkbox">Push your commits linking them all to your issue by including the hash tag of your issue.</label></li>
+<li><label><input type="checkbox">Always push your commits linking them all to your issue by including the hash tag of your issue.</label></li>
 <li><label><input type="checkbox">Run checks of the package locally. They all need to pass!</label></li>
 </ul>
 <!-- --><div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>Rcpp<span class="sc">::</span><span class="fu">compileAttributes</span>()</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox">Submit your Pull Request.</label></li>
-<li><label><input type="checkbox">Respond to all the comments from the maintainer.</label></li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="instructions-from-the-issue-template">Instructions from the issue template<a class="anchor" aria-label="anchor" href="#instructions-from-the-issue-template"></a>
-</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Fork the repository <a href="https://github.com/bsvars/StealLikeBayes" class="external-link">bsvars/StealLikeBayes</a>.</label></li>
-<li>
-<label><input type="checkbox">Include your <strong>C++</strong> file, <code>src/[main_routine].cpp</code>, named after the main routine/function you’re contributing called <code>[main_routine]</code>.</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Acknowledge the authorship of the source code in this file in line with its licence requirements.</label></li>
-<li><label><input type="checkbox">Export all <strong>C++</strong> functions by including <strong>Rcpp</strong> directives <code>// [[Rcpp::interfaces(cpp)]]</code> and <code>// [[Rcpp::export]]</code>.</label></li>
-<li><label><input type="checkbox">Write and <strong>R</strong> wrapper only for the main function you contribute.</label></li>
-</ul>
-</li>
-<li><label><input type="checkbox">Include the corresponding <strong>C++</strong> header file, <code>src/[main_routine].h</code> with all your <strong>C++</strong> functions.</label></li>
-<li>
-<label><input type="checkbox">Include one <strong>R</strong> file with a wrapper for your main <strong>C++</strong> function, <code>R/[main_routine].R</code>.</label>
-<ul class="task-list">
-<li><label><input type="checkbox">This function must include argument type checks using <code><a href="https://rdrr.io/r/base/stopifnot.html" class="external-link">stopifnot()</a></code>.</label></li>
-<li><label><input type="checkbox">Include full documentation using <strong>roxygen2</strong> that must have all necessary elements including:</label></li>
-<li><label><input type="checkbox">the description of arguments and values, also described in terms of the <strong>C++</strong> objects,</label></li>
-<li><label><input type="checkbox">the acknowledgement of the original code authorship in <code>@details</code> with explicit references to the <strong>R</strong> package where the original code comes from listed in <code>@references</code>, and to the package defining the class of <strong>C++</strong> inputs and outputs,</label></li>
-<li><label><input type="checkbox">your authorship acknowledgement in section <code>@authors</code>,</label></li>
-<li><label><input type="checkbox">an example of the <strong>R</strong> function use in <code>@examples</code>.</label></li>
-</ul>
-</li>
-<li><label><input type="checkbox">Include an <strong>R</strong> file with tests of your contributed <strong>R</strong> function, <code>inst/tinytest/test_[main_routine].R</code>,</label></li>
-<li><label><input type="checkbox">Update on dependencies in <code>DESCRIPTION</code> and <code>R/StealLikeBayes-package.R</code>.</label></li>
-<li><label><input type="checkbox">Update on your authorship in <code>DESCRIPTION</code>, using <code><a href="https://rdrr.io/r/utils/person.html" class="external-link">person()</a></code>. In <code>comment</code> include your <code>ORCID</code> and <code>contributions</code>, for instance <code>contributions = "contributions: [main_routine]"</code>.</label></li>
-<li><label><input type="checkbox">Update the <code>NEWS.md</code> by providing the <code>[main_routine]</code>, your GitHub profile login, and a link to this issue.</label></li>
-<li><label><input type="checkbox">Push your commits linking them all to your issue by including the hash tag of your issue.</label></li>
-<li><label><input type="checkbox">Run checks of the package locally. They all need to pass!</label></li>
-</ul>
-<!-- --><div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>Rcpp<span class="sc">::</span><span class="fu">compileAttributes</span>()</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">check</span>()</span></code></pre></div>
 <ul class="task-list">
 <li><label><input type="checkbox">Submit your Pull Request.</label></li>
 <li><label><input type="checkbox">Respond to all the comments from the maintainer.</label></li>
@@ -153,33 +114,43 @@
 <p>In order to use our <strong>C++</strong> code in your <strong>R</strong> package you need to ensure you include all the dependencies to both: our package, and packages on which our functions rely on such as <strong>RcppArmadillo</strong>. The latter is on you!</p>
 <p>To use <strong>C++</strong> code from <strong>StealLikeBayes</strong> follow the steps:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Include dependencies in your <code>DESCRIPTION</code> file, e.g.: <code>LinkingTo: StealLikeBayes</code>.</label></li>
+<li><label><input type="checkbox">Include dependencies in your <code>DESCRIPTION</code> file, e.g.: <code>LinkingTo: StealLikeBayes</code> and <code>Imports: StealLikeBayes</code>.</label></li>
+<li><label><input type="checkbox">Include dependencies in your <code>R/*-package.R</code> file, e.g.: <code>@import: StealLikeBayes</code></label></li>
 <li><label><input type="checkbox">Include our header in your <code>src/*.cpp</code> files, e.g.: <code>#include "StealLikeBayes.h"</code>.</label></li>
 <li><label><input type="checkbox">Use our functions in your <strong>C++</strong> code, e.g.:</label></li>
 </ul>
-<!-- --><div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>arma<span class="sc">::</span>vec out <span class="ot">=</span> StealLikeBayes<span class="sc">::</span><span class="fu">rnorm1_precision_sampler</span>(zeros<span class="sc">&lt;</span>vec<span class="sc">&gt;</span>(<span class="dv">10</span>), ones<span class="sc">&lt;</span>vec<span class="sc">&gt;</span>(<span class="dv">10</span>), <span class="sc">-</span><span class="fl">0.5</span>);</span></code></pre></div>
+<!-- --><div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>arma<span class="sc">::</span>vec out <span class="ot">=</span> StealLikeBayes<span class="sc">::</span><span class="fu">rnorm1_precision_sampler</span>(zeros<span class="sc">&lt;</span>vec<span class="sc">&gt;</span>(<span class="dv">10</span>), ones<span class="sc">&lt;</span>vec<span class="sc">&gt;</span>(<span class="dv">10</span>), <span class="sc">-</span><span class="fl">0.5</span>);</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="use-our-r-code-in-your-r-package">Use our <strong>R</strong> code in your <strong>R</strong> package<a class="anchor" aria-label="anchor" href="#use-our-r-code-in-your-r-package"></a>
 </h3>
 <p>That’s simple!</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Include dependencies in your <code>DESCRIPTION</code> file, e.g.: <code>Depends: StealLikeBayes</code>.</label></li>
+<li><label><input type="checkbox">Include dependencies in your <code>DESCRIPTION</code> file, e.g.: <code>Imports: StealLikeBayes</code>.</label></li>
 <li><label><input type="checkbox">Include dependencies in your <code>R/*-package.R</code> file, e.g. <code>@importFrom StealLikeBayes rnorm1_precision_sampler</code>.</label></li>
 <li><label><input type="checkbox">Use our functions in your <strong>R</strong> code, e.g.:</label></li>
 </ul>
-<!-- --><div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>out <span class="ot">=</span> StealLikeBayes<span class="sc">::</span><span class="fu">rnorm1_precision_sampler</span>(<span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="sc">-</span><span class="fl">0.5</span>)</span></code></pre></div>
+<!-- --><div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>out <span class="ot">=</span> StealLikeBayes<span class="sc">::</span><span class="fu">rnorm1_precision_sampler</span>(<span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="sc">-</span><span class="fl">0.5</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<div class="section level4">
+<h4 id="the-first-time-you-install-the-package">The first time you install the package<a class="anchor" aria-label="anchor" href="#the-first-time-you-install-the-package"></a>
+</h4>
+<p>You must have a <strong>cpp</strong> compiler. Follow the instructions from <a href="https://cran.r-project.org/package=Rcpp/vignettes/Rcpp-FAQ.pdf" class="external-link">Section 1.3. by Eddelbuettel &amp; François (2023)</a>. In short, for <strong>Windows:</strong> install <a href="https://CRAN.R-project.org/bin/windows/Rtools/" class="external-link">RTools</a>, for <strong>macOS:</strong> install <a href="https://www.freecodecamp.org/news/install-xcode-command-line-tools/" class="external-link">Xcode Command Line Tools</a>, and for <strong>Linux:</strong> install the standard development packages.</p>
+</div>
+<div class="section level4">
+<h4 id="once-thats-done">Once that’s done:<a class="anchor" aria-label="anchor" href="#once-thats-done"></a>
+</h4>
 <p>You can install the <strong>StealLikeBayes</strong> package by running:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">install_packages</span><span class="op">(</span><span class="st">"StealLikeBayes"</span><span class="op">)</span></span></code></pre></div>
-<p>You can install the development version of <strong>StealLikeBayes</strong> like so:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<p>You can install the developer’s version of <strong>StealLikeBayes</strong> from its <a href="https://github.com/bsvars/StealLikeBayes" class="external-link">GitHub repository</a> by running:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"bsvars/StealLikeBayes"</span><span class="op">)</span></span></code></pre></div>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
