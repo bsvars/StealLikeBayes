@@ -37,10 +37,10 @@ Authors:
   ([ORCID](https://orcid.org/0009-0007-2190-768X)) (contributions:
   sample_variances_horseshoe)
 
-- Filip Reierson <filip.reierson@gmail.com>
-  ([ORCID](https://orcid.org/0009-0003-2393-5810)) (contributions:
-  rtmvnorm)
-
 - Jianying Shelly Xie <shellyyinggxie@gmail.com>
   ([ORCID](https://orcid.org/0009-0008-6451-6416)) (contributions:
   sample_variances_normal_gamma)
+
+- Filip Reierson <filip.reierson@gmail.com>
+  ([ORCID](https://orcid.org/0009-0003-2393-5810)) (contributions:
+  rtmvnorm)

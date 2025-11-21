@@ -43,7 +43,8 @@ Open an issue by clicking *New issue* \>\> *A new submission template*.
 Fork the repository
 [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
 
-Follow the instructions from the issue.
+Follow the [instructions from the
+issue](https://bsvars.org/StealLikeBayes/articles/Instrucions.html).
 
 Always push your commits linking them all to your issue by including the
 hash tag of your issue.
