@@ -156,3 +156,9 @@ devtools::install_github("bsvars/StealLikeBayes")
   : Samples variances of the Normal-Gamma prior distribution by Brown &
   Griffin (2010).
 
+# Articles
+
+### All vignettes
+
+- [Instrucions for
+  contributors](http://bsvars.org/StealLikeBayes/articles/Instrucions.md):
