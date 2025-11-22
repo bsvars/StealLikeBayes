@@ -36,16 +36,6 @@ Authors@R: c(
       )
     ),
     person(
-      "Filip",
-      "Reierson",,
-      "filip.reierson@gmail.com", 
-      role = c("aut"),
-      comment = c(
-        ORCID = "0009-0003-2393-5810", 
-        contributions = "contributions: rtmvnorm"
-      )
-    ),
-    person(
       "Jianying Shelly", 
       "Xie",, 
       "shellyyinggxie@gmail.com", 
@@ -53,6 +43,16 @@ Authors@R: c(
       comment = c(
         ORCID = "0009-0008-6451-6416", 
         contributions = "contributions: sample_variances_normal_gamma"
+      )
+    ),
+    person(
+      "Filip",
+      "Reierson",,
+      "filip.reierson@gmail.com", 
+      role = c("aut"),
+      comment = c(
+        ORCID = "0009-0003-2393-5810", 
+        contributions = "contributions: rtmvnorm"
       )
     )
   )
@@ -76,3 +76,4 @@ BugReports: https://github.com/bsvars/StealLikeBayes/issues
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.3.3
+Config/Needs/website: rmarkdown

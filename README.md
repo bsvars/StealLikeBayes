@@ -27,6 +27,8 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
   compatibility.
 - Fully acknowledge the source of the contributed code in the file with
   your code and documentation.
+- Once you contribute, we might reach out later for you to join the
+  authors of a paper to be published on the basis of this package.
 - Provide one Bayesian statistical routine per submission.
 - Your submission must consist of:
   - one **C++** file, `src/*.cpp`
@@ -36,9 +38,9 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
     code authorship,
   - one **R** file with tests of your function,
     `inst/tinytest/test_*.R`,
-  - Updates on dependencies in `DESCRIPTION` and
-    `R/StealLikeBayes-package.R`,
-  - updates on your authorship in `DESCRIPTION`.
+  - updates on your authorship in `DESCRIPTION`,
+  - if required, updates on dependencies in `DESCRIPTION` and
+    `R/StealLikeBayes-package.R`.
 
 ### To-do list
 
@@ -46,59 +48,10 @@ You are welcome to contribute to **StealLikeBayes**! How does this work?
   template*.
 - [ ] Fork the repository
   [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
-- [ ] Follow the instructions from the issue.
-- [ ] Push your commits linking them all to your issue by including the
-  hash tag of your issue.
-- [ ] Run checks of the package locally. They all need to pass!
-
-<!-- -->
-
-    Rcpp::compileAttributes()
-    devtools::document()
-    devtools::check()
-
-- [ ] Submit your Pull Request.
-- [ ] Respond to all the comments from the maintainer.
-
-### Instructions from the issue template
-
-- [ ] Fork the repository
-  [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
-- [ ] Include your **C++** file, `src/[main_routine].cpp`, named after
-  the main routine/function you’re contributing called `[main_routine]`.
-  - [ ] Acknowledge the authorship of the source code in this file in
-    line with its licence requirements.
-  - [ ] Export all **C++** functions by including **Rcpp** directives
-    `// [[Rcpp::interfaces(cpp)]]` and `// [[Rcpp::export]]`.
-  - [ ] Write and **R** wrapper only for the main function you
-    contribute.
-- [ ] Include the corresponding **C++** header file,
-  `src/[main_routine].h` with all your **C++** functions.
-- [ ] Include one **R** file with a wrapper for your main **C++**
-  function, `R/[main_routine].R`.
-  - [ ] This function must include argument type checks using
-    `stopifnot()`.
-  - [ ] Include full documentation using **roxygen2** that must have all
-    necessary elements including:
-  - [ ] the description of arguments and values, also described in terms
-    of the **C++** objects,
-  - [ ] the acknowledgement of the original code authorship in
-    `@details` with explicit references to the **R** package where the
-    original code comes from listed in `@references`, and to the package
-    defining the class of **C++** inputs and outputs,
-  - [ ] your authorship acknowledgement in section `@authors`,
-  - [ ] an example of the **R** function use in `@examples`.
-- [ ] Include an **R** file with tests of your contributed **R**
-  function, `inst/tinytest/test_[main_routine].R`,
-- [ ] Update on dependencies in `DESCRIPTION` and
-  `R/StealLikeBayes-package.R`.
-- [ ] Update on your authorship in `DESCRIPTION`, using `person()`. In
-  `comment` include your `ORCID` and `contributions`, for instance
-  `contributions = "contributions: [main_routine]"`.
-- [ ] Update the `NEWS.md` by providing the `[main_routine]`, your
-  GitHub profile login, and a link to this issue.
-- [ ] Push your commits linking them all to your issue by including the
-  hash tag of your issue.
+- [ ] Follow the [instructions from the
+  issue](https://bsvars.org/StealLikeBayes/articles/Instrucions.html).
+- [ ] Always push your commits linking them all to your issue by
+  including the hash tag of your issue.
 - [ ] Run checks of the package locally. They all need to pass!
 
 <!-- -->
@@ -125,7 +78,9 @@ latter is on you!
 To use **C++** code from **StealLikeBayes** follow the steps:
 
 - [ ] Include dependencies in your `DESCRIPTION` file, e.g.:
-  `LinkingTo: StealLikeBayes`.
+  `LinkingTo: StealLikeBayes` and `Imports: StealLikeBayes`.
+- [ ] Include dependencies in your `R/*-package.R` file, e.g.:
+  `@import: StealLikeBayes`
 - [ ] Include our header in your `src/*.cpp` files, e.g.:
   `#include "StealLikeBayes.h"`.
 - [ ] Use our functions in your **C++** code, e.g.:
@@ -139,7 +94,7 @@ To use **C++** code from **StealLikeBayes** follow the steps:
 That’s simple!
 
 - [ ] Include dependencies in your `DESCRIPTION` file, e.g.:
-  `Depends: StealLikeBayes`.
+  `Imports: StealLikeBayes`.
 - [ ] Include dependencies in your `R/*-package.R` file,
   e.g. `@importFrom StealLikeBayes rnorm1_precision_sampler`.
 - [ ] Use our functions in your **R** code, e.g.:
@@ -150,13 +105,28 @@ That’s simple!
 
 ## Installation
 
+#### The first time you install the package
+
+You must have a **cpp** compiler. Follow the instructions from [Section
+1.3. by Eddelbuettel & François
+(2023)](https://cran.r-project.org/package=Rcpp/vignettes/Rcpp-FAQ.pdf).
+In short, for **Windows:** install
+[RTools](https://CRAN.R-project.org/bin/windows/Rtools/), for **macOS:**
+install [Xcode Command Line
+Tools](https://www.freecodecamp.org/news/install-xcode-command-line-tools/),
+and for **Linux:** install the standard development packages.
+
+#### Once that’s done:
+
 You can install the **StealLikeBayes** package by running:
 
 ``` r
 install_packages("StealLikeBayes")
 ```
 
-You can install the development version of **StealLikeBayes** like so:
+You can install the developer’s version of **StealLikeBayes** from its
+[GitHub repository](https://github.com/bsvars/StealLikeBayes) by
+running:
 
 ``` r
 devtools::install_github("bsvars/StealLikeBayes")

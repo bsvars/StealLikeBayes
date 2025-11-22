@@ -33,8 +33,8 @@ Authors:
 \itemize{
   \item Xiaolei Wang \email{adamwang15@gmail.com} (\href{https://orcid.org/0009-0005-6192-9061}{ORCID}) (contributions: rhaar1)
   \item Longcan Li \email{longcando@outlook.com} (\href{https://orcid.org/0009-0007-2190-768X}{ORCID}) (contributions: sample_variances_horseshoe)
-  \item Filip Reierson \email{filip.reierson@gmail.com} (\href{https://orcid.org/0009-0003-2393-5810}{ORCID}) (contributions: rtmvnorm)
   \item Jianying Shelly Xie \email{shellyyinggxie@gmail.com} (\href{https://orcid.org/0009-0008-6451-6416}{ORCID}) (contributions: sample_variances_normal_gamma)
+  \item Filip Reierson \email{filip.reierson@gmail.com} (\href{https://orcid.org/0009-0003-2393-5810}{ORCID}) (contributions: rtmvnorm)
 }
 
 }

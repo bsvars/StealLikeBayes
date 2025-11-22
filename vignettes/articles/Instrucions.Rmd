@@ -1,44 +1,17 @@
 ---
-name: A new submission template
-about: Use this template as a guide to your submission to StealLikeBayes
-title: "[SUBMISSION] [main_routine]"
-labels: ''
-assignees: ''
-
+title: "Instrucions for contributors"
 ---
 
-Thank you for your submission to **StealLikeBayes**! Enjoy working on it and spread the news! 
-
-Cheers, Tomasz
-
-## Things to remember
-
-- We only accept code from packages and repositories with compatible licences. If you are contributing code from a package distributed under **GPL 3** you're good. Otherwise, you must argue the licence compatibility.
-- Fully acknowledge the source of the contributed code in the file with your code and documentation.
-- Once you contribute, we might reach out later for you to join the authors of a paper to be published on the basis of this package.
-- Provide one Bayesian statistical routine per submission.
-- Your submission must consist of:
-  - one **C++** file, `src/*.cpp`
-  - the corresponding **C++** header file, `src/*.h`
-  - one **R** file with a wrapper for your main **C++** function, `R/*.R` with full documentation and acknowledgement of the original code authorship,
-  - one **R** file with tests of your function, `inst/tinytest/test_*.R`,
-  - updates on your authorship in `DESCRIPTION`,
-  - if required, updates on dependencies in `DESCRIPTION` and `R/StealLikeBayes-package.R`.
-
-## To-do list
-
-- [ ] Open an issue by clicking *New issue* >> *A new submission template*.
-- [ ] Fork the repository [bsvars/StealLikeBayes](https://github.com/bsvars/StealLikeBayes).
-- [ ] Follow the instructions from the issue.
-- [ ] Always push your commits linking them all to your issue by including the hash tag of your issue.
-- [ ] Run checks of the package locally. They all need to pass!
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
 ```
-Rcpp::compileAttributes()
-devtools::document()
-devtools::check()
-```
-- [ ] Submit your Pull Request.
-- [ ] Respond to all the comments from the maintainer.
+
+Hi! Thanks for considering to contribute to **StealLikeBayes**!
+
+This article will give you an idea of what's ahead of you to contribute to the repository and package. Begin by forking the [repo](https://github.com/bsvars/StealLikeBayes) on GitHub and opening an issue about your contribution. Just, open an issue by clicking *New issue* >> *A new submission template*. This issue will contain the following instructions:
 
 ## Instructions to follow
 
