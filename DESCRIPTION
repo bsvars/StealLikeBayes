@@ -53,6 +53,16 @@ Authors@R: c(
       comment = c(
         ORCID = "0009-0003-2393-5810", 
         contributions = "contributions: rtmvnorm"
+        )
+    ),
+    person(
+      "Kenyon",
+      "Ng",,
+      "kenyon.ng@gmail.com",
+      role = c("aut"),
+      comment = c(
+        ORCID = "0000-0002-6315-9831",
+        contributions = "contributions: rtmvnorm_hmc"
       )
     )
   )
@@ -68,6 +78,7 @@ Imports:
 LinkingTo: 
   Rcpp, 
   RcppArmadillo,
+  RcppEigen,
   GIGrvg
 Suggests: 
   tinytest

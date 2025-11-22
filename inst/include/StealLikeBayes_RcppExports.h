@@ -5,6 +5,7 @@
 #define RCPP_StealLikeBayes_RCPPEXPORTS_H_GEN_
 
 #include <RcppArmadillo.h>
+#include <RcppEigen.h>
 #include <Rcpp.h>
 
 namespace StealLikeBayes {
@@ -107,6 +108,48 @@ namespace StealLikeBayes {
         if (rcpp_result_gen.inherits("try-error"))
             throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<arma::cube >(rcpp_result_gen);
+    }
+
+    inline arma::mat qr_sign_cpp(const arma::mat& A) {
+        typedef SEXP(*Ptr_qr_sign_cpp)(SEXP);
+        static Ptr_qr_sign_cpp p_qr_sign_cpp = NULL;
+        if (p_qr_sign_cpp == NULL) {
+            validateSignature("arma::mat(*qr_sign_cpp)(const arma::mat&)");
+            p_qr_sign_cpp = (Ptr_qr_sign_cpp)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_qr_sign_cpp");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_qr_sign_cpp(Shield<SEXP>(Rcpp::wrap(A)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::mat >(rcpp_result_gen);
+    }
+
+    inline arma::mat rhaar1(const int& n) {
+        typedef SEXP(*Ptr_rhaar1)(SEXP);
+        static Ptr_rhaar1 p_rhaar1 = NULL;
+        if (p_rhaar1 == NULL) {
+            validateSignature("arma::mat(*rhaar1)(const int&)");
+            p_rhaar1 = (Ptr_rhaar1)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rhaar1");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rhaar1(Shield<SEXP>(Rcpp::wrap(n)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::mat >(rcpp_result_gen);
     }
 
     inline Rcpp::List cholesky_tridiagonal(const arma::vec& omega_diag, const double& omega_offdiag) {
@@ -317,6 +360,257 @@ namespace StealLikeBayes {
         if (rcpp_result_gen.inherits("try-error"))
             throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<arma::mat >(rcpp_result_gen);
+    }
+
+    inline void validate_dimensions(const Eigen::MatrixXd& cov, const Eigen::VectorXd& mean, const Eigen::VectorXd& initial, const Eigen::MatrixXd& F, const Eigen::VectorXd& g) {
+        typedef SEXP(*Ptr_validate_dimensions)(SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_validate_dimensions p_validate_dimensions = NULL;
+        if (p_validate_dimensions == NULL) {
+            validateSignature("void(*validate_dimensions)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&)");
+            p_validate_dimensions = (Ptr_validate_dimensions)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_validate_dimensions");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_validate_dimensions(Shield<SEXP>(Rcpp::wrap(cov)), Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(initial)), Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(g)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+    }
+
+    inline Eigen::MatrixXd symmetrise(const Eigen::MatrixXd& cov) {
+        typedef SEXP(*Ptr_symmetrise)(SEXP);
+        static Ptr_symmetrise p_symmetrise = NULL;
+        if (p_symmetrise == NULL) {
+            validateSignature("Eigen::MatrixXd(*symmetrise)(const Eigen::MatrixXd&)");
+            p_symmetrise = (Ptr_symmetrise)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_symmetrise");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_symmetrise(Shield<SEXP>(Rcpp::wrap(cov)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::MatrixXd >(rcpp_result_gen);
+    }
+
+    inline Eigen::MatrixXd transform_constraint_matrix(const Eigen::MatrixXd& F, const Eigen::MatrixXd& L) {
+        typedef SEXP(*Ptr_transform_constraint_matrix)(SEXP,SEXP);
+        static Ptr_transform_constraint_matrix p_transform_constraint_matrix = NULL;
+        if (p_transform_constraint_matrix == NULL) {
+            validateSignature("Eigen::MatrixXd(*transform_constraint_matrix)(const Eigen::MatrixXd&,const Eigen::MatrixXd&)");
+            p_transform_constraint_matrix = (Ptr_transform_constraint_matrix)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_transform_constraint_matrix");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_transform_constraint_matrix(Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(L)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::MatrixXd >(rcpp_result_gen);
+    }
+
+    inline Eigen::VectorXd transform_constraint_offset(const Eigen::MatrixXd& F, const Eigen::VectorXd& mean, const Eigen::VectorXd& g) {
+        typedef SEXP(*Ptr_transform_constraint_offset)(SEXP,SEXP,SEXP);
+        static Ptr_transform_constraint_offset p_transform_constraint_offset = NULL;
+        if (p_transform_constraint_offset == NULL) {
+            validateSignature("Eigen::VectorXd(*transform_constraint_offset)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&)");
+            p_transform_constraint_offset = (Ptr_transform_constraint_offset)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_transform_constraint_offset");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_transform_constraint_offset(Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(g)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::VectorXd >(rcpp_result_gen);
+    }
+
+    inline Eigen::VectorXd transform_initial_point(const Eigen::MatrixXd& L, const Eigen::VectorXd& mean, const Eigen::VectorXd& initial) {
+        typedef SEXP(*Ptr_transform_initial_point)(SEXP,SEXP,SEXP);
+        static Ptr_transform_initial_point p_transform_initial_point = NULL;
+        if (p_transform_initial_point == NULL) {
+            validateSignature("Eigen::VectorXd(*transform_initial_point)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&)");
+            p_transform_initial_point = (Ptr_transform_initial_point)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_transform_initial_point");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_transform_initial_point(Shield<SEXP>(Rcpp::wrap(L)), Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(initial)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::VectorXd >(rcpp_result_gen);
+    }
+
+    inline Rcpp::List get_next_linear_hit_time(const Eigen::VectorXd& a, const Eigen::VectorXd& b, const Eigen::MatrixXd& F, const Eigen::VectorXd& g, int current_constraint) {
+        typedef SEXP(*Ptr_get_next_linear_hit_time)(SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_get_next_linear_hit_time p_get_next_linear_hit_time = NULL;
+        if (p_get_next_linear_hit_time == NULL) {
+            validateSignature("Rcpp::List(*get_next_linear_hit_time)(const Eigen::VectorXd&,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&,int)");
+            p_get_next_linear_hit_time = (Ptr_get_next_linear_hit_time)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_get_next_linear_hit_time");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_get_next_linear_hit_time(Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(b)), Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(g)), Shield<SEXP>(Rcpp::wrap(current_constraint)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Rcpp::List >(rcpp_result_gen);
+    }
+
+    inline bool verify_constraints(const Eigen::VectorXd& x, const Eigen::MatrixXd& F, const Eigen::VectorXd& g) {
+        typedef SEXP(*Ptr_verify_constraints)(SEXP,SEXP,SEXP);
+        static Ptr_verify_constraints p_verify_constraints = NULL;
+        if (p_verify_constraints == NULL) {
+            validateSignature("bool(*verify_constraints)(const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&)");
+            p_verify_constraints = (Ptr_verify_constraints)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_verify_constraints");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_verify_constraints(Shield<SEXP>(Rcpp::wrap(x)), Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(g)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<bool >(rcpp_result_gen);
+    }
+
+    inline Eigen::VectorXd reflect_velocity(const Eigen::VectorXd& f, const Eigen::VectorXd& hit_velocity) {
+        typedef SEXP(*Ptr_reflect_velocity)(SEXP,SEXP);
+        static Ptr_reflect_velocity p_reflect_velocity = NULL;
+        if (p_reflect_velocity == NULL) {
+            validateSignature("Eigen::VectorXd(*reflect_velocity)(const Eigen::VectorXd&,const Eigen::VectorXd&)");
+            p_reflect_velocity = (Ptr_reflect_velocity)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_reflect_velocity");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_reflect_velocity(Shield<SEXP>(Rcpp::wrap(f)), Shield<SEXP>(Rcpp::wrap(hit_velocity)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::VectorXd >(rcpp_result_gen);
+    }
+
+    inline Eigen::VectorXd sample_next(const Eigen::VectorXd& current_sample, int dim, const Eigen::MatrixXd& F, const Eigen::VectorXd& g) {
+        typedef SEXP(*Ptr_sample_next)(SEXP,SEXP,SEXP,SEXP);
+        static Ptr_sample_next p_sample_next = NULL;
+        if (p_sample_next == NULL) {
+            validateSignature("Eigen::VectorXd(*sample_next)(const Eigen::VectorXd&,int,const Eigen::MatrixXd&,const Eigen::VectorXd&)");
+            p_sample_next = (Ptr_sample_next)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_sample_next");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_sample_next(Shield<SEXP>(Rcpp::wrap(current_sample)), Shield<SEXP>(Rcpp::wrap(dim)), Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(g)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::VectorXd >(rcpp_result_gen);
+    }
+
+    inline Eigen::MatrixXd rtmvnorm_hmc(int n, const Eigen::VectorXd& mean, const Eigen::MatrixXd& cov, const Eigen::VectorXd& initial, const Eigen::MatrixXd& F, const Eigen::VectorXd& g, int burn = 10) {
+        typedef SEXP(*Ptr_rtmvnorm_hmc)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_rtmvnorm_hmc p_rtmvnorm_hmc = NULL;
+        if (p_rtmvnorm_hmc == NULL) {
+            validateSignature("Eigen::MatrixXd(*rtmvnorm_hmc)(int,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&,int)");
+            p_rtmvnorm_hmc = (Ptr_rtmvnorm_hmc)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rtmvnorm_hmc");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rtmvnorm_hmc(Shield<SEXP>(Rcpp::wrap(n)), Shield<SEXP>(Rcpp::wrap(mean)), Shield<SEXP>(Rcpp::wrap(cov)), Shield<SEXP>(Rcpp::wrap(initial)), Shield<SEXP>(Rcpp::wrap(F)), Shield<SEXP>(Rcpp::wrap(g)), Shield<SEXP>(Rcpp::wrap(burn)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<Eigen::MatrixXd >(rcpp_result_gen);
+    }
+
+    inline arma::vec sample_variances_horseshoe(const arma::vec x, arma::vec& theta, double& zeta, arma::vec& nu, double& varpi) {
+        typedef SEXP(*Ptr_sample_variances_horseshoe)(SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_sample_variances_horseshoe p_sample_variances_horseshoe = NULL;
+        if (p_sample_variances_horseshoe == NULL) {
+            validateSignature("arma::vec(*sample_variances_horseshoe)(const arma::vec,arma::vec&,double&,arma::vec&,double&)");
+            p_sample_variances_horseshoe = (Ptr_sample_variances_horseshoe)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_sample_variances_horseshoe");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_sample_variances_horseshoe(Shield<SEXP>(Rcpp::wrap(x)), Shield<SEXP>(Rcpp::wrap(theta)), Shield<SEXP>(Rcpp::wrap(zeta)), Shield<SEXP>(Rcpp::wrap(nu)), Shield<SEXP>(Rcpp::wrap(varpi)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::vec >(rcpp_result_gen);
+    }
+
+    inline arma::vec sample_variances_normal_gamma(const arma::vec x, arma::vec& theta_tilde, double& zeta, double& a, const arma::vec a_vec, const double varrho0, const double varrho1, const bool hyper, const double tol = 1e-6) {
+        typedef SEXP(*Ptr_sample_variances_normal_gamma)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_sample_variances_normal_gamma p_sample_variances_normal_gamma = NULL;
+        if (p_sample_variances_normal_gamma == NULL) {
+            validateSignature("arma::vec(*sample_variances_normal_gamma)(const arma::vec,arma::vec&,double&,double&,const arma::vec,const double,const double,const bool,const double)");
+            p_sample_variances_normal_gamma = (Ptr_sample_variances_normal_gamma)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_sample_variances_normal_gamma");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_sample_variances_normal_gamma(Shield<SEXP>(Rcpp::wrap(x)), Shield<SEXP>(Rcpp::wrap(theta_tilde)), Shield<SEXP>(Rcpp::wrap(zeta)), Shield<SEXP>(Rcpp::wrap(a)), Shield<SEXP>(Rcpp::wrap(a_vec)), Shield<SEXP>(Rcpp::wrap(varrho0)), Shield<SEXP>(Rcpp::wrap(varrho1)), Shield<SEXP>(Rcpp::wrap(hyper)), Shield<SEXP>(Rcpp::wrap(tol)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::vec >(rcpp_result_gen);
     }
 
 }

@@ -3,7 +3,7 @@
 using namespace Rcpp;
 using namespace arma;
 
-// [[Rcpp:interface(cpp)]]
+// [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
 arma::vec sample_variances_horseshoe(
     const arma::vec x,      // Input: current coefficient values
