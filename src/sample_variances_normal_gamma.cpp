@@ -21,7 +21,7 @@ double do_rgig(double lambda, double chi, double psi) {
  *  on 19 November 2025 and then rewritten.
  */
 // QR decomposition, where the diagonal elements of R are positive
-// [[Rcpp:interface(cpp)]]
+// [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
 arma::vec sample_variances_normal_gamma(
     const arma::vec x, 

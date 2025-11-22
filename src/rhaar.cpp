@@ -7,7 +7,7 @@ using namespace arma;
  * and Tomasz Woźniak on 18 November 2025 and then rewritten.
  */
 // QR decomposition, where the diagonal elements of R are positive
-// [[Rcpp:interface(cpp)]]
+// [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
 arma::mat qr_sign_cpp(const arma::mat &A)
 {
@@ -32,7 +32,7 @@ arma::mat qr_sign_cpp(const arma::mat &A)
  * and Tomasz Woźniak on 18 November 2025 and then rewritten.
  */
 // Sample uniformly from the space of nxn orthogonal matrices
-// [[Rcpp:interface(cpp)]]
+// [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
 arma::mat rhaar1(const int &n)
 {
