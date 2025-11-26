@@ -659,6 +659,40 @@ RcppExport SEXP _StealLikeBayes_symmetrise(SEXP covSEXP) {
     UNPROTECT(1);
     return rcpp_result_gen;
 }
+// safe_cholesky
+Eigen::LLT<Eigen::MatrixXd> safe_cholesky(const Eigen::MatrixXd& cov);
+static SEXP _StealLikeBayes_safe_cholesky_try(SEXP covSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::traits::input_parameter< const Eigen::MatrixXd& >::type cov(covSEXP);
+    rcpp_result_gen = Rcpp::wrap(safe_cholesky(cov));
+    return rcpp_result_gen;
+END_RCPP_RETURN_ERROR
+}
+RcppExport SEXP _StealLikeBayes_safe_cholesky(SEXP covSEXP) {
+    SEXP rcpp_result_gen;
+    {
+        Rcpp::RNGScope rcpp_rngScope_gen;
+        rcpp_result_gen = PROTECT(_StealLikeBayes_safe_cholesky_try(covSEXP));
+    }
+    Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
+    if (rcpp_isInterrupt_gen) {
+        UNPROTECT(1);
+        Rf_onintr();
+    }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
+    Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
+    if (rcpp_isError_gen) {
+        SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
+        UNPROTECT(1);
+        Rf_error("%s", CHAR(rcpp_msgSEXP_gen));
+    }
+    UNPROTECT(1);
+    return rcpp_result_gen;
+}
 // transform_constraint_matrix
 Eigen::MatrixXd transform_constraint_matrix(const Eigen::MatrixXd& F, const Eigen::MatrixXd& L);
 static SEXP _StealLikeBayes_transform_constraint_matrix_try(SEXP FSEXP, SEXP LSEXP) {
@@ -1055,6 +1089,7 @@ static int _StealLikeBayes_RcppExport_validate(const char* sig) {
         signatures.insert("arma::mat(*rtmvnorm)(const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::mat&,const arma::uword)");
         signatures.insert("void(*validate_dimensions)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&)");
         signatures.insert("Eigen::MatrixXd(*symmetrise)(const Eigen::MatrixXd&)");
+        signatures.insert("Eigen::LLT<Eigen::MatrixXd>(*safe_cholesky)(const Eigen::MatrixXd&)");
         signatures.insert("Eigen::MatrixXd(*transform_constraint_matrix)(const Eigen::MatrixXd&,const Eigen::MatrixXd&)");
         signatures.insert("Eigen::VectorXd(*transform_constraint_offset)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&)");
         signatures.insert("Eigen::VectorXd(*transform_initial_point)(const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::VectorXd&)");
@@ -1089,6 +1124,7 @@ RcppExport SEXP _StealLikeBayes_RcppExport_registerCCallable() {
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_rtmvnorm", (DL_FUNC)_StealLikeBayes_rtmvnorm_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_validate_dimensions", (DL_FUNC)_StealLikeBayes_validate_dimensions_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_symmetrise", (DL_FUNC)_StealLikeBayes_symmetrise_try);
+    R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_safe_cholesky", (DL_FUNC)_StealLikeBayes_safe_cholesky_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_transform_constraint_matrix", (DL_FUNC)_StealLikeBayes_transform_constraint_matrix_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_transform_constraint_offset", (DL_FUNC)_StealLikeBayes_transform_constraint_offset_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_transform_initial_point", (DL_FUNC)_StealLikeBayes_transform_initial_point_try);
@@ -1122,6 +1158,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_StealLikeBayes_rtmvnorm", (DL_FUNC) &_StealLikeBayes_rtmvnorm, 7},
     {"_StealLikeBayes_validate_dimensions", (DL_FUNC) &_StealLikeBayes_validate_dimensions, 5},
     {"_StealLikeBayes_symmetrise", (DL_FUNC) &_StealLikeBayes_symmetrise, 1},
+    {"_StealLikeBayes_safe_cholesky", (DL_FUNC) &_StealLikeBayes_safe_cholesky, 1},
     {"_StealLikeBayes_transform_constraint_matrix", (DL_FUNC) &_StealLikeBayes_transform_constraint_matrix, 2},
     {"_StealLikeBayes_transform_constraint_offset", (DL_FUNC) &_StealLikeBayes_transform_constraint_offset, 3},
     {"_StealLikeBayes_transform_initial_point", (DL_FUNC) &_StealLikeBayes_transform_initial_point, 3},
