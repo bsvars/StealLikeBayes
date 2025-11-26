@@ -2,12 +2,12 @@
 
 A **C++** Compendium of Bayesian Statistical Routines for **R** Packages
 
-This is a compendium of C++ routines useful for Bayesian statistics. We
-steal other people’s C++ code, repurpose it, and export it so developers
-of R packages can use it in their C++ code. We actually don’t steal
-anything, or claim that Thomas Bayes did, but copy code that is
-compatible with our GPL 3 licence, fully acknowledging the authorship of
-the original code.
+This is a compendium of **C++** routines useful for Bayesian statistics.
+We steal other people’s **C++** code, repurpose it, and export it so
+developers of R packages can use it in their **C++** code. We actually
+don’t steal anything, or claim that Thomas Bayes did, but copy code that
+is compatible with our GPL 3 licence, fully acknowledging the authorship
+of the original code.
 
 ## How to contribute
 
