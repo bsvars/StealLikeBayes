@@ -55,7 +55,7 @@
 #' 1–24. <doi:10.18637/jss.v052.i05>
 #'
 #' @examples
-#' rtmvnorm_hmc(100, c(0, 0), diag(2), c(0, 2), diag(2), c(1, -1), 10)
+#' rtmvnorm_hmc(1, c(0, 0), diag(2), c(0, 2), diag(2), c(1, -1), 1)
 #'
 #' @export
 rtmvnorm_hmc <- function(n, mean, cov, initial, Fmat, g, burn) {
