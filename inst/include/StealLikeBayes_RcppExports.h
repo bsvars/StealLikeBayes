@@ -403,27 +403,6 @@ namespace StealLikeBayes {
         return Rcpp::as<Eigen::MatrixXd >(rcpp_result_gen);
     }
 
-    inline Eigen::LLT<Eigen::MatrixXd> safe_cholesky(const Eigen::MatrixXd& cov) {
-        typedef SEXP(*Ptr_safe_cholesky)(SEXP);
-        static Ptr_safe_cholesky p_safe_cholesky = NULL;
-        if (p_safe_cholesky == NULL) {
-            validateSignature("Eigen::LLT<Eigen::MatrixXd>(*safe_cholesky)(const Eigen::MatrixXd&)");
-            p_safe_cholesky = (Ptr_safe_cholesky)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_safe_cholesky");
-        }
-        RObject rcpp_result_gen;
-        {
-            RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_safe_cholesky(Shield<SEXP>(Rcpp::wrap(cov)));
-        }
-        if (rcpp_result_gen.inherits("interrupted-error"))
-            throw Rcpp::internal::InterruptedException();
-        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
-            throw Rcpp::LongjumpException(rcpp_result_gen);
-        if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
-        return Rcpp::as<Eigen::LLT<Eigen::MatrixXd> >(rcpp_result_gen);
-    }
-
     inline Eigen::MatrixXd transform_constraint_matrix(const Eigen::MatrixXd& F, const Eigen::MatrixXd& L) {
         typedef SEXP(*Ptr_transform_constraint_matrix)(SEXP,SEXP);
         static Ptr_transform_constraint_matrix p_transform_constraint_matrix = NULL;
