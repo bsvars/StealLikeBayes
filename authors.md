@@ -26,11 +26,11 @@ Source:
 [`DESCRIPTION`](https://github.com/bsvars/StealLikeBayes/blob/master/DESCRIPTION)
 
 Woźniak T, Wang X, Li L, Xie J, Reierson F (2025). *StealLikeBayes: A
-C++ Compendium of Bayesian Statistical Routines for R Packages*. R
-package version 1.0, <https://bsvars.org/StealLikeBayes/>.
+Compendium of Bayesian Statistical Routines Written in 'C++'*. R package
+version 1.0, <https://bsvars.org/StealLikeBayes/>.
 
     @Manual{,
-      title = {StealLikeBayes: A C++ Compendium of Bayesian Statistical Routines for R Packages},
+      title = {StealLikeBayes: A Compendium of Bayesian Statistical Routines Written in 'C++'},
       author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li and Jianying Shelly Xie and Filip Reierson},
       year = {2025},
       note = {R package version 1.0},

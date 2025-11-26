@@ -1,4 +1,4 @@
-# A C++ compendium of Bayesian statistical routines for R packages
+# A Compendium of Bayesian Statistical Routines Written in C++
 
 This is a compendium of C++ routines useful for Bayesian statistics. We
 steal other people's C++ code, repurpose it, and export it so developers
