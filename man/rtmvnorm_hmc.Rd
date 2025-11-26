@@ -57,7 +57,7 @@ This function is a wrapper around a C++ implementation adapted from the 'tnorm'
 R package by Kenyon Ng.
 }
 \examples{
-rtmvnorm_hmc(100, c(0, 0), diag(2), c(0, 2), diag(2), c(1, -1), 10)
+rtmvnorm_hmc(1, c(0, 0), diag(2), c(0, 2), diag(2), c(1, -1), 1)
 
 }
 \references{
