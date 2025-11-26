@@ -116,7 +116,7 @@ Jianying Shelly Xie <shellyyinggxie@gmail.com>
 
 ``` r
 sample_variances_normal_gamma(rep(0,2), rep(1,2), 1, 1, rep(1,2), 1, 1, TRUE, 1e-6)
-#>          [,1]
-#> [1,] 2.129573
-#> [2,] 4.068682
+#>            [,1]
+#> [1,] 0.00437863
+#> [2,] 0.23291054
 ```

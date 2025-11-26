@@ -18,3 +18,5 @@
     [\#10](https://github.com/bsvars/StealLikeBayes/issues/10)
 6.  `rtmvnorm` provided by [@freierson](https://github.com/freierson)
     [\#12](https://github.com/bsvars/StealLikeBayes/issues/12)
+7.  `rtmvnorm_hmc` provided by [@weiyaw](https://github.com/weiyaw)
+    [\#14](https://github.com/bsvars/StealLikeBayes/issues/14)

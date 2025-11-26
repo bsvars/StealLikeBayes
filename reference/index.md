@@ -13,6 +13,9 @@
 - [`rtmvnorm()`](http://bsvars.org/StealLikeBayes/reference/rtmvnorm.md)
   : Sample Random Draws From the Truncated Multivariate Normal Using the
   Algorithm Proposed by Yifang Li and Sujit K. Ghosh (2015)
+- [`rtmvnorm_hmc()`](http://bsvars.org/StealLikeBayes/reference/rtmvnorm_hmc.md)
+  : Generate Truncated Multivariate Normal Samples via Hamiltonian Monte
+  Carlo
 - [`sample_variances_horseshoe()`](http://bsvars.org/StealLikeBayes/reference/sample_variances_horseshoe.md)
   : Samples variances from the horseshoe prior using Gruber & Kastner
   (2024)

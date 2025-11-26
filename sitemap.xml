@@ -12,6 +12,7 @@
 <url><loc>http://bsvars.org/StealLikeBayes/reference/rhaar1.html</loc></url>
 <url><loc>http://bsvars.org/StealLikeBayes/reference/rnorm1_precision_sampler.html</loc></url>
 <url><loc>http://bsvars.org/StealLikeBayes/reference/rtmvnorm.html</loc></url>
+<url><loc>http://bsvars.org/StealLikeBayes/reference/rtmvnorm_hmc.html</loc></url>
 <url><loc>http://bsvars.org/StealLikeBayes/reference/sample_variances_horseshoe.html</loc></url>
 <url><loc>http://bsvars.org/StealLikeBayes/reference/sample_variances_normal_gamma.html</loc></url>
 </urlset>

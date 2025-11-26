@@ -44,3 +44,7 @@ Authors:
 - Filip Reierson <filip.reierson@gmail.com>
   ([ORCID](https://orcid.org/0009-0003-2393-5810)) (contributions:
   rtmvnorm)
+
+- Kenyon Ng <kenyon.ng@gmail.com>
+  ([ORCID](https://orcid.org/0000-0002-6315-9831)) (contributions:
+  rtmvnorm_hmc)

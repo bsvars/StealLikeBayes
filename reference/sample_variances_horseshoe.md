@@ -93,6 +93,6 @@ Longcan Li <longcando@outlook.com>
 ``` r
 sample_variances_horseshoe( rep(0, 2), rep(0, 2), 1, rep(1, 2), 1)
 #>           [,1]
-#> [1,] 0.2170079
-#> [2,] 0.3932400
+#> [1,] 0.6865769
+#> [2,] 0.1109575
 ```
