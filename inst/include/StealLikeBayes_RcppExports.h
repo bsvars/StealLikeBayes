@@ -257,17 +257,17 @@ namespace StealLikeBayes {
         return Rcpp::as<arma::vec >(rcpp_result_gen);
     }
 
-    inline arma::vec rnorm1_precision_sampler(const arma::vec& location, const arma::vec& precision_diag, const double& precision_offdiag) {
-        typedef SEXP(*Ptr_rnorm1_precision_sampler)(SEXP,SEXP,SEXP);
-        static Ptr_rnorm1_precision_sampler p_rnorm1_precision_sampler = NULL;
-        if (p_rnorm1_precision_sampler == NULL) {
-            validateSignature("arma::vec(*rnorm1_precision_sampler)(const arma::vec&,const arma::vec&,const double&)");
-            p_rnorm1_precision_sampler = (Ptr_rnorm1_precision_sampler)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rnorm1_precision_sampler");
+    inline arma::vec rmvnorm1_precision_sampler(const arma::vec& location, const arma::vec& precision_diag, const double& precision_offdiag) {
+        typedef SEXP(*Ptr_rmvnorm1_precision_sampler)(SEXP,SEXP,SEXP);
+        static Ptr_rmvnorm1_precision_sampler p_rmvnorm1_precision_sampler = NULL;
+        if (p_rmvnorm1_precision_sampler == NULL) {
+            validateSignature("arma::vec(*rmvnorm1_precision_sampler)(const arma::vec&,const arma::vec&,const double&)");
+            p_rmvnorm1_precision_sampler = (Ptr_rmvnorm1_precision_sampler)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rmvnorm1_precision_sampler");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_rnorm1_precision_sampler(Shield<SEXP>(Rcpp::wrap(location)), Shield<SEXP>(Rcpp::wrap(precision_diag)), Shield<SEXP>(Rcpp::wrap(precision_offdiag)));
+            rcpp_result_gen = p_rmvnorm1_precision_sampler(Shield<SEXP>(Rcpp::wrap(location)), Shield<SEXP>(Rcpp::wrap(precision_diag)), Shield<SEXP>(Rcpp::wrap(precision_offdiag)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();

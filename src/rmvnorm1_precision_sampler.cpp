@@ -74,7 +74,7 @@ arma::vec backward_algorithm(
  */
 // [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
-arma::vec rnorm1_precision_sampler(
+arma::vec rmvnorm1_precision_sampler(
     const arma::vec&     location,
     const arma::vec&     precision_diag,
     const double&        precision_offdiag
@@ -89,4 +89,4 @@ arma::vec rnorm1_precision_sampler(
                                            precision_chol["chol_offdiag"],
                                                          aa + epsilon);     // this has to be done in the loop as function backward_algorithm requires covector to be a vector (not a matrix)
   return draw_ssar1;
-} // END rnorm1_precision_sampler
+} // END rmvnorm1_precision_sampler

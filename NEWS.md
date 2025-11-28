@@ -4,7 +4,7 @@ A C++ compendium of Bayesian statistical routines for R packages
 
 # StealLikeBayes 1.0
 
-1. `rnorm1_precision_sampler` provided by [@donotdespair](https://github.com/donotdespair) [#1](https://github.com/bsvars/StealLikeBayes/issues/1)
+1. `rmvnorm1_precision_sampler` provided by [@donotdespair](https://github.com/donotdespair) [#1](https://github.com/bsvars/StealLikeBayes/issues/1)
 2. `rgennorm` provided by [@donotdespair](https://github.com/donotdespair) [#5](https://github.com/bsvars/StealLikeBayes/issues/5)
 3. `rhaar1` provided by [@adamwang15](https://github.com/adamwang15) [#6](https://github.com/bsvars/StealLikeBayes/issues/6)
 4. `sample_variances_horseshoe` provided by [@longcando](https://github.com/Longcando) [#9](https://github.com/bsvars/StealLikeBayes/issues/9)

@@ -408,23 +408,23 @@ RcppExport SEXP _StealLikeBayes_backward_algorithm(SEXP chol_diagSEXP, SEXP chol
     UNPROTECT(1);
     return rcpp_result_gen;
 }
-// rnorm1_precision_sampler
-arma::vec rnorm1_precision_sampler(const arma::vec& location, const arma::vec& precision_diag, const double& precision_offdiag);
-static SEXP _StealLikeBayes_rnorm1_precision_sampler_try(SEXP locationSEXP, SEXP precision_diagSEXP, SEXP precision_offdiagSEXP) {
+// rmvnorm1_precision_sampler
+arma::vec rmvnorm1_precision_sampler(const arma::vec& location, const arma::vec& precision_diag, const double& precision_offdiag);
+static SEXP _StealLikeBayes_rmvnorm1_precision_sampler_try(SEXP locationSEXP, SEXP precision_diagSEXP, SEXP precision_offdiagSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const arma::vec& >::type location(locationSEXP);
     Rcpp::traits::input_parameter< const arma::vec& >::type precision_diag(precision_diagSEXP);
     Rcpp::traits::input_parameter< const double& >::type precision_offdiag(precision_offdiagSEXP);
-    rcpp_result_gen = Rcpp::wrap(rnorm1_precision_sampler(location, precision_diag, precision_offdiag));
+    rcpp_result_gen = Rcpp::wrap(rmvnorm1_precision_sampler(location, precision_diag, precision_offdiag));
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP _StealLikeBayes_rnorm1_precision_sampler(SEXP locationSEXP, SEXP precision_diagSEXP, SEXP precision_offdiagSEXP) {
+RcppExport SEXP _StealLikeBayes_rmvnorm1_precision_sampler(SEXP locationSEXP, SEXP precision_diagSEXP, SEXP precision_offdiagSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(_StealLikeBayes_rnorm1_precision_sampler_try(locationSEXP, precision_diagSEXP, precision_offdiagSEXP));
+        rcpp_result_gen = PROTECT(_StealLikeBayes_rmvnorm1_precision_sampler_try(locationSEXP, precision_diagSEXP, precision_offdiagSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
@@ -1121,7 +1121,7 @@ static int _StealLikeBayes_RcppExport_validate(const char* sig) {
         signatures.insert("Rcpp::List(*cholesky_tridiagonal)(const arma::vec&,const double&)");
         signatures.insert("arma::vec(*forward_algorithm)(const arma::vec&,const arma::vec&,const arma::vec&)");
         signatures.insert("arma::vec(*backward_algorithm)(const arma::vec&,const arma::vec&,const arma::vec&)");
-        signatures.insert("arma::vec(*rnorm1_precision_sampler)(const arma::vec&,const arma::vec&,const double&)");
+        signatures.insert("arma::vec(*rmvnorm1_precision_sampler)(const arma::vec&,const arma::vec&,const double&)");
         signatures.insert("double(*norm_rej)(const double,const double)");
         signatures.insert("double(*unif_rej)(const double,const double)");
         signatures.insert("double(*halfnorm_rej)(const double,const double)");
@@ -1157,7 +1157,7 @@ RcppExport SEXP _StealLikeBayes_RcppExport_registerCCallable() {
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_cholesky_tridiagonal", (DL_FUNC)_StealLikeBayes_cholesky_tridiagonal_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_forward_algorithm", (DL_FUNC)_StealLikeBayes_forward_algorithm_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_backward_algorithm", (DL_FUNC)_StealLikeBayes_backward_algorithm_try);
-    R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_rnorm1_precision_sampler", (DL_FUNC)_StealLikeBayes_rnorm1_precision_sampler_try);
+    R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_rmvnorm1_precision_sampler", (DL_FUNC)_StealLikeBayes_rmvnorm1_precision_sampler_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_norm_rej", (DL_FUNC)_StealLikeBayes_norm_rej_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_unif_rej", (DL_FUNC)_StealLikeBayes_unif_rej_try);
     R_RegisterCCallable("StealLikeBayes", "_StealLikeBayes_halfnorm_rej", (DL_FUNC)_StealLikeBayes_halfnorm_rej_try);
@@ -1192,7 +1192,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_StealLikeBayes_cholesky_tridiagonal", (DL_FUNC) &_StealLikeBayes_cholesky_tridiagonal, 2},
     {"_StealLikeBayes_forward_algorithm", (DL_FUNC) &_StealLikeBayes_forward_algorithm, 3},
     {"_StealLikeBayes_backward_algorithm", (DL_FUNC) &_StealLikeBayes_backward_algorithm, 3},
-    {"_StealLikeBayes_rnorm1_precision_sampler", (DL_FUNC) &_StealLikeBayes_rnorm1_precision_sampler, 3},
+    {"_StealLikeBayes_rmvnorm1_precision_sampler", (DL_FUNC) &_StealLikeBayes_rmvnorm1_precision_sampler, 3},
     {"_StealLikeBayes_norm_rej", (DL_FUNC) &_StealLikeBayes_norm_rej, 2},
     {"_StealLikeBayes_unif_rej", (DL_FUNC) &_StealLikeBayes_unif_rej, 2},
     {"_StealLikeBayes_halfnorm_rej", (DL_FUNC) &_StealLikeBayes_halfnorm_rej, 2},
