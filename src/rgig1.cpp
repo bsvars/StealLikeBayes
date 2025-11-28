@@ -119,7 +119,7 @@ double rgig1(
        (chi == 0. && lambda <= 0.) ||
        (psi == 0. && lambda >= 0.) ) {
 
-    throw std::bad_function_call();
+    throw std::logic_error("do_rgig1 invalid input.");
   }
 
   double res;
