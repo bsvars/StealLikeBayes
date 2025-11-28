@@ -110,6 +110,48 @@ namespace StealLikeBayes {
         return Rcpp::as<arma::cube >(rcpp_result_gen);
     }
 
+    inline double univar_rgig_newapproach1(double lambda, double lambda_old, double omega, double alpha) {
+        typedef SEXP(*Ptr_univar_rgig_newapproach1)(SEXP,SEXP,SEXP,SEXP);
+        static Ptr_univar_rgig_newapproach1 p_univar_rgig_newapproach1 = NULL;
+        if (p_univar_rgig_newapproach1 == NULL) {
+            validateSignature("double(*univar_rgig_newapproach1)(double,double,double,double)");
+            p_univar_rgig_newapproach1 = (Ptr_univar_rgig_newapproach1)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_univar_rgig_newapproach1");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_univar_rgig_newapproach1(Shield<SEXP>(Rcpp::wrap(lambda)), Shield<SEXP>(Rcpp::wrap(lambda_old)), Shield<SEXP>(Rcpp::wrap(omega)), Shield<SEXP>(Rcpp::wrap(alpha)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
+    inline double rgig1(double lambda, double chi, double psi) {
+        typedef SEXP(*Ptr_rgig1)(SEXP,SEXP,SEXP);
+        static Ptr_rgig1 p_rgig1 = NULL;
+        if (p_rgig1 == NULL) {
+            validateSignature("double(*rgig1)(double,double,double)");
+            p_rgig1 = (Ptr_rgig1)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rgig1");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rgig1(Shield<SEXP>(Rcpp::wrap(lambda)), Shield<SEXP>(Rcpp::wrap(chi)), Shield<SEXP>(Rcpp::wrap(psi)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<double >(rcpp_result_gen);
+    }
+
     inline arma::mat qr_sign_cpp(const arma::mat& A) {
         typedef SEXP(*Ptr_qr_sign_cpp)(SEXP);
         static Ptr_qr_sign_cpp p_qr_sign_cpp = NULL;
