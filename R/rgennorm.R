@@ -34,7 +34,7 @@
 #' @param S an \eqn{N\times N\times N} array with \eqn{N\times N} row-specific
 #' precision matrices \eqn{S_n}. \strong{C++}: an \code{arma::cube} object.
 #' @param nu a positive integer number with the shape parameter \eqn{nu}. 
-#' \strong{C++}: an \code{arma::int} object.
+#' \strong{C++}: an \code{int} object.
 #' @param V a list with \eqn{N} elements each including \eqn{r_n\times N} 
 #' matrices \eqn{V_n}. \strong{C++}: an \code{arma::field<arma::mat>} object.
 #' @param normalise a logical value of whether the output should be normalised

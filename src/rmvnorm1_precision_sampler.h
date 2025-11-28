@@ -23,7 +23,7 @@ arma::vec backward_algorithm(
 );
 
 
-arma::vec rnorm1_precision_sampler(
+arma::vec rmvnorm1_precision_sampler(
     const arma::vec&     location,
     const arma::vec&     precision_diag,
     const double&        precision_offdiag
