@@ -12,6 +12,8 @@
 #' \end{array}
 #' }
 #' The sampling algorithm proposed by Hörmann & Leydold (2013) is implemented.
+#' If the arguments do not satisfy the restrictions a std::logic_error exception 
+#' is thrown in \proglang{C++}.
 #' 
 #' This method is useful for sampling variance coefficients that arise in problems
 #' with their likelihood in the form of th inverse gamma distribution and assuming 
