@@ -1,7 +1,11 @@
 # Samples variances from the horseshoe prior using Gruber & Kastner (2024)
 
-Performs one Gibbs sampling iteration for the horseshoe prior variance
-parameters. The horseshoe prior Carvalho, Polson, Scott (2010) is a
+Performs one Gibbs sampling iteration for the \*\*exported
+hyper-parameters\*\* \#' of the horseshoe prior variance parameters:
+**local variances** (\\\lambda_j^2\\, argument `theta`), **global
+variance** (\\\tau^2\\, argument `zeta`), and their **corresponding
+auxiliary variables** (\\\nu_j\\ and \\\varpi\\, arguments `nu` and
+`varpi`). The horseshoe prior Carvalho, Polson, Scott (2010) is a
 continuous shrinkage prior for Bayesian variable selection with the
 hierarchical structure: \$\$\beta_j \sim N(0, \lambda_j^2 \tau^2)\$\$
 \$\$\lambda_j \sim C^+(0, 1)\$\$ \$\$\tau \sim C^+(0, 1)\$\$ where
@@ -50,8 +54,24 @@ sample_variances_horseshoe(coefs, theta, zeta, nu, varpi)
 
 ## Value
 
-a vector of variances' random draws. **C++**: an `arma::vec` vector
-object.
+A \*\*list\*\* of C++ objects of class `Rcpp::List` containing the
+updated variance parameters. The elements are:
+
+- `V_i`: A \\p\\-vector of the total prior variances \\\lambda_j^2
+  \tau^2\\. **R**: a \*\*numeric vector\*\*. **C++**: an `arma::vec`
+  object.
+
+- `theta`: The updated \\p\\-vector of local variances \\\lambda_j^2\\.
+  **R**: a \*\*numeric vector\*\*. **C++**: an `arma::vec` object.
+
+- `zeta`: The updated scalar global variance \\\tau^2\\. **R**: a
+  \*\*positive scalar\*\*. **C++**: a `double` scalar.
+
+- `nu`: The updated \\p\\-vector of local auxiliary variables \\\nu_j\\.
+  **R**: a \*\*numeric vector\*\*. **C++**: an `arma::vec` object.
+
+- `varpi`: The updated scalar global auxiliary variable \\\varpi\\.
+  **R**: a \*\*positive scalar\*\*. **C++**: a `double` scalar.
 
 ## Details
 
