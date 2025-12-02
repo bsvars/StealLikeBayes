@@ -23,13 +23,27 @@ updated by reference. \strong{C++}: an \code{arma::vec} vector object.}
 shrinkage, updated by reference. \strong{C++}: a \code{double} scalar.}
 }
 \value{
-a vector of variances' random draws. \strong{C++}: an \code{arma::vec} vector object.
+A **list** of C++ objects of class \code{Rcpp::List} containing the updated variance parameters. 
+The elements are:
+\itemize{
+  \item \code{V_i}: A \eqn{p}-vector of the total prior variances \eqn{\lambda_j^2 \tau^2}. 
+  \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
+  \item \code{theta}: The updated \eqn{p}-vector of local variances \eqn{\lambda_j^2}. 
+  \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
+  \item \code{zeta}: The updated scalar global variance \eqn{\tau^2}. 
+  \strong{R}: a **positive scalar**. \strong{C++}: a \code{double} scalar.
+  \item \code{nu}: The updated \eqn{p}-vector of local auxiliary variables \eqn{\nu_j}. 
+  \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
+  \item \code{varpi}: The updated scalar global auxiliary variable \eqn{\varpi}. 
+  \strong{R}: a **positive scalar**. \strong{C++}: a \code{double} scalar.
+}
 }
 \description{
-Performs one Gibbs sampling iteration for the horseshoe prior
-variance parameters. The horseshoe prior Carvalho, Polson, Scott (2010) is a 
-continuous shrinkage prior for Bayesian variable selection with the 
-hierarchical structure:
+Performs one Gibbs sampling iteration for the **exported hyper-parameters** #' of the horseshoe prior variance parameters: \strong{local variances} (\eqn{\lambda_j^2}, argument \code{theta}), 
+\strong{global variance} (\eqn{\tau^2}, argument \code{zeta}), and their \strong{corresponding auxiliary variables} 
+(\eqn{\nu_j} and \eqn{\varpi}, arguments \code{nu} and \code{varpi}). The horseshoe prior 
+Carvalho, Polson, Scott (2010) is a continuous shrinkage prior for Bayesian 
+variable selection with the hierarchical structure:
 \deqn{\beta_j \sim N(0, \lambda_j^2 \tau^2)}
 \deqn{\lambda_j \sim C^+(0, 1)}
 \deqn{\tau \sim C^+(0, 1)}

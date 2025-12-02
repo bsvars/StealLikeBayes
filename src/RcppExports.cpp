@@ -1026,7 +1026,7 @@ RcppExport SEXP _StealLikeBayes_rtmvnorm_hmc(SEXP nSEXP, SEXP meanSEXP, SEXP cov
     return rcpp_result_gen;
 }
 // sample_variances_horseshoe
-List sample_variances_horseshoe(const arma::vec x, arma::vec& theta, double& zeta, arma::vec& nu, double& varpi);
+Rcpp::List sample_variances_horseshoe(const arma::vec x, arma::vec& theta, double& zeta, arma::vec& nu, double& varpi);
 static SEXP _StealLikeBayes_sample_variances_horseshoe_try(SEXP xSEXP, SEXP thetaSEXP, SEXP zetaSEXP, SEXP nuSEXP, SEXP varpiSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -1138,8 +1138,8 @@ static int _StealLikeBayes_RcppExport_validate(const char* sig) {
         signatures.insert("Eigen::VectorXd(*reflect_velocity)(const Eigen::VectorXd&,const Eigen::VectorXd&)");
         signatures.insert("Eigen::VectorXd(*sample_next)(const Eigen::VectorXd&,int,const Eigen::MatrixXd&,const Eigen::VectorXd&)");
         signatures.insert("Eigen::MatrixXd(*rtmvnorm_hmc)(int,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&,const Eigen::MatrixXd&,const Eigen::VectorXd&,int)");
+        signatures.insert("Rcpp::List(*sample_variances_horseshoe)(const arma::vec,arma::vec&,double&,arma::vec&,double&)");
         signatures.insert("Rcpp::List(*sample_variances_normal_gamma)(const arma::vec,arma::vec&,double&,double&,const arma::vec,const double,const double,const bool,const double)");
-        signatures.insert("List(*sample_variances_horseshoe)(const arma::vec,arma::vec&,double&,arma::vec&,double&)");
     }
     return signatures.find(sig) != signatures.end();
 }

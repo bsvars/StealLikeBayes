@@ -1,8 +1,8 @@
 #' @title Samples variances from the horseshoe prior using Gruber & Kastner (2024)
 #' 
-#' @description Performs one Gibbs sampling iteration for the **exported hyper-parameters** #' of the horseshoe prior variance parameters: \strong{local variances} ($\lambda_j^2$, argument \code{theta}), 
-#' \strong{global variance} ($\tau^2$, argument \code{zeta}), and their \strong{corresponding auxiliary variables} 
-#' ($\nu_j$ and $\varpi$, arguments \code{nu} and \code{varpi}). The horseshoe prior 
+#' @description Performs one Gibbs sampling iteration for the **exported hyper-parameters** #' of the horseshoe prior variance parameters: \strong{local variances} (\eqn{\lambda_j^2}, argument \code{theta}), 
+#' \strong{global variance} (\eqn{\tau^2}, argument \code{zeta}), and their \strong{corresponding auxiliary variables} 
+#' (\eqn{\nu_j} and \eqn{\varpi}, arguments \code{nu} and \code{varpi}). The horseshoe prior 
 #' Carvalho, Polson, Scott (2010) is a continuous shrinkage prior for Bayesian 
 #' variable selection with the hierarchical structure:
 #' \deqn{\beta_j \sim N(0, \lambda_j^2 \tau^2)}
@@ -36,15 +36,15 @@
 #' @return A **list** of C++ objects of class \code{Rcpp::List} containing the updated variance parameters. 
 #' The elements are:
 #' \itemize{
-#'   \item \code{V_i}: A \eqn{p}-vector of the total prior variances $\lambda_j^2 \tau^2$. 
+#'   \item \code{V_i}: A \eqn{p}-vector of the total prior variances \eqn{\lambda_j^2 \tau^2}. 
 #'   \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
-#'   \item \code{theta}: The updated \eqn{p}-vector of local variances $\lambda_j^2$. 
+#'   \item \code{theta}: The updated \eqn{p}-vector of local variances \eqn{\lambda_j^2}. 
 #'   \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
-#'   \item \code{zeta}: The updated scalar global variance $\tau^2$. 
+#'   \item \code{zeta}: The updated scalar global variance \eqn{\tau^2}. 
 #'   \strong{R}: a **positive scalar**. \strong{C++}: a \code{double} scalar.
-#'   \item \code{nu}: The updated \eqn{p}-vector of local auxiliary variables $\nu_j$. 
+#'   \item \code{nu}: The updated \eqn{p}-vector of local auxiliary variables \eqn{\nu_j}. 
 #'   \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
-#'   \item \code{varpi}: The updated scalar global auxiliary variable $\varpi$. 
+#'   \item \code{varpi}: The updated scalar global auxiliary variable \eqn{\varpi}. 
 #'   \strong{R}: a **positive scalar**. \strong{C++}: a \code{double} scalar.
 #' }
 #'
