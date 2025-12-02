@@ -2,6 +2,8 @@
 
 ## StealLikeBayes 1.0
 
+CRAN release: 2025-12-02
+
 1.  `rnorm1_precision_sampler` provided by
     [@donotdespair](https://github.com/donotdespair)
     [\#1](https://github.com/bsvars/StealLikeBayes/issues/1)

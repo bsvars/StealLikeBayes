@@ -134,13 +134,3 @@ running:
 ``` r
 devtools::install_github("bsvars/StealLikeBayes")
 ```
-
-## The origin story
-
-The work on this package was initiated during the 2025 NUMBAT Hackathon.
-Then, Adam and Longcan from the University of Melbourne, and Shelly,
-Filip, and Kenyon from Monash University joined Tomasz to work together
-on the **StealLikeBayes** package version 1.0. We thank [Monash
-NUMBATs](https://numbat.space/) and [Monash
-EBS](https://www.monash.edu/business/ebs) for organising the event and
-providing resources that enabled collaborative development.
