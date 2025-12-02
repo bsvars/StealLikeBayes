@@ -592,11 +592,11 @@ namespace StealLikeBayes {
         return Rcpp::as<List >(rcpp_result_gen);
     }
 
-    inline arma::vec sample_variances_normal_gamma(const arma::vec x, arma::vec& theta_tilde, double& zeta, double& a, const arma::vec a_vec, const double varrho0, const double varrho1, const bool hyper, const double tol = 1e-6) {
+    inline Rcpp::List sample_variances_normal_gamma(const arma::vec x, arma::vec& theta_tilde, double& zeta, double& a, const arma::vec a_vec, const double varrho0, const double varrho1, const bool hyper, const double tol = 1e-6) {
         typedef SEXP(*Ptr_sample_variances_normal_gamma)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
         static Ptr_sample_variances_normal_gamma p_sample_variances_normal_gamma = NULL;
         if (p_sample_variances_normal_gamma == NULL) {
-            validateSignature("arma::vec(*sample_variances_normal_gamma)(const arma::vec,arma::vec&,double&,double&,const arma::vec,const double,const double,const bool,const double)");
+            validateSignature("Rcpp::List(*sample_variances_normal_gamma)(const arma::vec,arma::vec&,double&,double&,const arma::vec,const double,const double,const bool,const double)");
             p_sample_variances_normal_gamma = (Ptr_sample_variances_normal_gamma)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_sample_variances_normal_gamma");
         }
         RObject rcpp_result_gen;
@@ -610,7 +610,7 @@ namespace StealLikeBayes {
             throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
             throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
-        return Rcpp::as<arma::vec >(rcpp_result_gen);
+        return Rcpp::as<Rcpp::List >(rcpp_result_gen);
     }
 
 }

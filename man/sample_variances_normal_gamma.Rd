@@ -39,15 +39,24 @@ an \code{arma::vec} vector object.}
 \item{tol}{The numerical tolerance, default is '1e-06'. \strong{C++}: an \code{double} object.}
 }
 \value{
-A vector of variances of the Normal-Gamma prior distribution. 
-\strong{C++}: an \code{arma::vec} object.
+A **list** of C++ objects of class \code{Rcpp::List} containing the updated variance parameters. 
+The elements are:
+\itemize{
+   \item \code{V_i} A vector of variances of the Normal-Gamma prior distribution. 
+   \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
+   \item \code{theta_tilde} An updated vector of \eqn{\vartheta_i}.
+   \strong{R}: a **numeric vector**. \strong{C++}: an \code{arma::vec} object.
+   \item \code{zeta}: An updated vector of  \eqn{\zeta_j}.
+   \strong{R}: a **positive scalar**. \strong{C++}: an \code{double} object.
+}
 }
 \description{
-This function samples variances from a Normal-Gamma prior distribution.
+This function samples variances as well as the hyper-parameters \eqn{\vartheta_i} and \eqn{\zeta} 
+from a Normal-Gamma prior distribution.
 The prior distribution has a hierarchical structure where each element \eqn{x_i} of a \eqn{k}-vector \eqn{X} follows: 
 \deqn{x_i \sim N(0,\vartheta_i \zeta_j), \vartheta_i \sim G(a_j, a_j / 2)
 \text{, and } \zeta_j^{-1} \sim G(b,c)} for \eqn{i=j=1,\dots,k}. The hyperparameter \eqn{a_j}
-follows an i.i.d. discrete hyperprior with \eqn{Pr(a_j = \tilde{a}_r) = p_r}, where
+follows an i.i.d. discrete hyperprior with \eqn{\Pr(a_j = \tilde{a}_r) = p_r}, where
 \eqn{\tilde{a} = (\tilde{a}_1, \dots, \tilde{a}_R)'} is the vector of strictly
 positive support points. See Brown & Griffin (2010) and Gruber & Kastner (2025) for further details.
 }
