@@ -11,7 +11,7 @@ using namespace Rcpp;
 // QR decomposition, where the diagonal elements of R are positive
 // [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
-arma::vec sample_variances_normal_gamma(
+Rcpp::List sample_variances_normal_gamma(
     const arma::vec x, 
     arma::vec& theta_tilde,
     double& zeta, 
@@ -68,5 +68,10 @@ arma::vec sample_variances_normal_gamma(
   
   
   V_i(ind) = theta_tilde(ind);
-  return V_i;
+  
+  return List::create(
+    _["V_i"] = V_i,
+    _["theta_tilde"] = theta_tilde,
+    _["zeta"] = zeta
+  );
 }

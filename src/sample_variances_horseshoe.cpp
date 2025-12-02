@@ -1,3 +1,4 @@
+// [[Rcpp::depends(RcppArmadillo)]]
 #include <RcppArmadillo.h>
 
 using namespace Rcpp;
@@ -5,13 +6,13 @@ using namespace arma;
 
 // [[Rcpp::interfaces(cpp)]]
 // [[Rcpp::export]]
-arma::vec sample_variances_horseshoe(
+Rcpp::List sample_variances_horseshoe(
     const arma::vec x,      // Input: current coefficient values
     arma::vec& theta,       // Local variances lambda^2
-    double& zeta,           // Global variance tau^2
+    double& zeta,           // Global variance tao^2
     arma::vec& nu,          // Auxiliary for lambda^2
-    double& varpi           // Auxiliary for tau^2
-  ) {
+    double& varpi          // Auxiliary for tao^2
+) {
   
   int n = x.n_elem;
   IntegerVector ii = seq_len(n) - 1;
@@ -43,7 +44,14 @@ arma::vec sample_variances_horseshoe(
   // Compute and return variances
   V_i_new(ind) = theta(ind) * zeta;
   
-  return V_i_new;
+  // return all results as a list
+  return List::create(
+    _["V_i"] = V_i_new,
+    _["theta"] = theta,
+    _["zeta"] = zeta,
+    _["nu"] = nu,
+    _["varpi"] = varpi
+  );
 }
 
 
