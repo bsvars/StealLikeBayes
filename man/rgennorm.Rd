@@ -18,7 +18,7 @@ initiate the Gibbs sampler. \strong{C++}: an \code{arma::mat} matrix object.}
 precision matrices \eqn{S_n}. \strong{C++}: an \code{arma::cube} object.}
 
 \item{nu}{a positive integer number with the shape parameter \eqn{nu}. 
-\strong{C++}: an \code{arma::int} object.}
+\strong{C++}: an \code{int} object.}
 
 \item{V}{a list with \eqn{N} elements each including \eqn{r_n\times N} 
 matrices \eqn{V_n}. \strong{C++}: an \code{arma::field<arma::mat>} object.}

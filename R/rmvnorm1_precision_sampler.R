@@ -21,13 +21,13 @@
 #' Ni, & Sanderson (2025)
 #' 
 #' @param location an \eqn{N}-vector with the location parameter \eqn{L}. 
-#' \strong{C++}: an \code{arma:vec} vector object.
+#' \strong{C++}: an \code{arma::vec} vector object.
 #' @param precision_diag an \eqn{N}-vector with the diagonal elements of the 
-#' precision matrix \eqn{P}. \strong{C++}: an \code{arma:vec} vector object.
+#' precision matrix \eqn{P}. \strong{C++}: an \code{arma::vec} vector object.
 #' @param precision_offdiag a numeric scalar with the off-diagonal element of 
 #' the precision matrix \eqn{P}. \strong{C++}: a \code{double} scalar.
 #' @return  an \eqn{N}-vector with random draws from the multivariate normal 
-#' distribution. \strong{C++}: an \code{arma:vec} vector object.
+#' distribution. \strong{C++}: an \code{arma::vec} vector object.
 #' 
 #' @author Tomasz Woźniak \email{wozniak.tom@pm.me}
 #' 
@@ -58,10 +58,10 @@
 #' RcppGallery \url{https://gallery.rcpp.org/articles/simulation-smoother-using-rcpparmadillo/}
 #' 
 #' @examples 
-#' rnorm1_precision_sampler(rep(0, 100), rep(1, 100), -0.5)
+#' rmvnorm1_precision_sampler(rep(0, 100), rep(1, 100), -0.5)
 #' 
 #' @export
-rnorm1_precision_sampler <- function(location, precision_diag, precision_offdiag) {
+rmvnorm1_precision_sampler <- function(location, precision_diag, precision_offdiag) {
   
   stopifnot(
     "The argument location must be a numeric vector with real numbers." =
@@ -80,7 +80,7 @@ rnorm1_precision_sampler <- function(location, precision_diag, precision_offdiag
     is.numeric(precision_offdiag) & length(precision_offdiag) == 1
   )
 
-  out = .Call(`_StealLikeBayes_rnorm1_precision_sampler`, location, precision_diag, precision_offdiag)
+  out = .Call(`_StealLikeBayes_rmvnorm1_precision_sampler`, location, precision_diag, precision_offdiag)
     
   return(out)
 }
