@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   articles/Instrucions: Instrucions.html
-last_built: 2025-12-02T23:02Z
+last_built: 2025-12-02T23:09Z
 urls:
   reference: http://bsvars.org/StealLikeBayes/reference
   article: http://bsvars.org/StealLikeBayes/articles
