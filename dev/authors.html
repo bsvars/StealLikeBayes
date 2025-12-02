@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="index.html">StealLikeBayes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,8 +16,13 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="articles/Instrucions.html">Instrucions for contributors</a></li>
+  </ul></li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
-      </ul><ul class="navbar-nav"></ul></div>
+      </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/bsvars/StealLikeBayes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+      </ul></div>
 
 
   </div>
@@ -32,7 +37,7 @@
 
       <ul class="list-unstyled"><li>
           <p><strong>Tomasz Woźniak</strong>. Author, maintainer. <a href="https://orcid.org/0000-0003-2212-2378" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
-          <br><small>contributions: rnorm1_precision_sampler, rgennorm</small></p>
+          <br><small>contributions: rmvnorm1_precision_sampler, rgennorm, rgig1</small></p>
         </li>
         <li>
           <p><strong>Xiaolei Wang</strong>. Author. <a href="https://orcid.org/0009-0005-6192-9061" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
@@ -42,22 +47,34 @@
           <p><strong>Longcan Li</strong>. Author. <a href="https://orcid.org/0009-0007-2190-768X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
           <br><small>contributions: sample_variances_horseshoe</small></p>
         </li>
+        <li>
+          <p><strong>Jianying Shelly Xie</strong>. Author. <a href="https://orcid.org/0009-0008-6451-6416" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
+          <br><small>contributions: sample_variances_normal_gamma</small></p>
+        </li>
+        <li>
+          <p><strong>Filip Reierson</strong>. Author. <a href="https://orcid.org/0009-0003-2393-5810" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
+          <br><small>contributions: rtmvnorm</small></p>
+        </li>
+        <li>
+          <p><strong>Kenyon Ng</strong>. Author. <a href="https://orcid.org/0000-0002-6315-9831" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>
+          <br><small>contributions: rtmvnorm_hmc</small></p>
+        </li>
       </ul></div>
 
     <div class="section level2">
       <h2 id="citation">Citation</h2>
-      <p></p>
+      <p><small class="dont-index">Source: <a href="https://github.com/bsvars/StealLikeBayes/blob/master/DESCRIPTION" class="external-link"><code>DESCRIPTION</code></a></small></p>
 
-      <p>Woźniak T, Wang X, Li L (2025).
-<em>StealLikeBayes: A C++ compendium of Bayesian statistical routines for R packages</em>.
-R package version 0.1.0.9000, <a href="http://bsvars.org/StealLikeBayes/">http://bsvars.org/StealLikeBayes/</a>.
+      <p>Woźniak T, Wang X, Li L, Xie J, Reierson F, Ng K (2025).
+<em>StealLikeBayes: A Compendium of Bayesian Statistical Routines Written in 'C++'</em>.
+R package version 1.0.0.9000, <a href="https://bsvars.org/StealLikeBayes/" class="external-link">https://bsvars.org/StealLikeBayes/</a>.
 </p>
       <pre>@Manual{,
-  title = {StealLikeBayes: A C++ compendium of Bayesian statistical routines for R packages},
-  author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li},
+  title = {StealLikeBayes: A Compendium of Bayesian Statistical Routines Written in 'C++'},
+  author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li and Jianying Shelly Xie and Filip Reierson and Kenyon Ng},
   year = {2025},
-  note = {R package version 0.1.0.9000},
-  url = {http://bsvars.org/StealLikeBayes/},
+  note = {R package version 1.0.0.9000},
+  url = {https://bsvars.org/StealLikeBayes/},
 }</pre>
     </div>
 
@@ -66,7 +83,7 @@ R package version 0.1.0.9000, <a href="http://bsvars.org/StealLikeBayes/">http:/
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li.</p>
+  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li, Jianying Shelly Xie, Filip Reierson, Kenyon Ng.</p>
 </div>
 
 <div class="pkgdown-footer-right">

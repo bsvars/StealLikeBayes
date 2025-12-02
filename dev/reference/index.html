@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">StealLikeBayes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,8 +16,13 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Instrucions.html">Instrucions for contributors</a></li>
+  </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
-      </ul><ul class="navbar-nav"></ul></div>
+      </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/bsvars/StealLikeBayes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+      </ul></div>
 
 
   </div>
@@ -46,6 +51,13 @@
 
         <dt>
 
+          <code><a href="rgig1.html">rgig1()</a></code>
+
+        </dt>
+        <dd>Samples random draws from the generalized inverse Gaussian distribution</dd>
+
+        <dt>
+
           <code><a href="rhaar1.html">rhaar1()</a></code>
 
         </dt>
@@ -53,10 +65,24 @@
 
         <dt>
 
-          <code><a href="rnorm1_precision_sampler.html">rnorm1_precision_sampler()</a></code>
+          <code><a href="rmvnorm1_precision_sampler.html">rmvnorm1_precision_sampler()</a></code>
 
         </dt>
         <dd>Samples random draws from a multivariate normal distribution using the precision sampler by Chan &amp; Jeliazkov (2009)</dd>
+
+        <dt>
+
+          <code><a href="rtmvnorm.html">rtmvnorm()</a></code>
+
+        </dt>
+        <dd>Sample Random Draws From the Truncated Multivariate Normal Using the Algorithm Proposed by Yifang Li and Sujit K. Ghosh (2015)</dd>
+
+        <dt>
+
+          <code><a href="rtmvnorm_hmc.html">rtmvnorm_hmc()</a></code>
+
+        </dt>
+        <dd>Generate Truncated Multivariate Normal Samples via Hamiltonian Monte Carlo</dd>
 
         <dt>
 
@@ -64,12 +90,19 @@
 
         </dt>
         <dd>Samples variances from the horseshoe prior using Gruber &amp; Kastner (2024)</dd>
+
+        <dt>
+
+          <code><a href="sample_variances_normal_gamma.html">sample_variances_normal_gamma()</a></code>
+
+        </dt>
+        <dd>Samples variances of the Normal-Gamma prior distribution by Brown &amp; Griffin (2010).</dd>
       </dl></div>
   </main></div>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li.</p>
+  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li, Jianying Shelly Xie, Filip Reierson, Kenyon Ng.</p>
 </div>
 
 <div class="pkgdown-footer-right">

@@ -35,7 +35,7 @@ argument ind."><meta property="og:image" content="http://bsvars.org/StealLikeBay
 
     <a class="navbar-brand me-2" href="../index.html">StealLikeBayes</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.1.0.9000</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +44,13 @@ argument ind."><meta property="og:image" content="http://bsvars.org/StealLikeBay
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Instrucions.html">Instrucions for contributors</a></li>
+  </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
-      </ul><ul class="navbar-nav"></ul></div>
+      </ul><ul class="navbar-nav"><li class="nav-item"><a class="external-link nav-link" href="https://github.com/bsvars/StealLikeBayes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+      </ul></div>
 
 
   </div>
@@ -53,7 +58,7 @@ argument ind."><meta property="og:image" content="http://bsvars.org/StealLikeBay
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Samples variances from the horseshoe prior using Gruber &amp; Kastner (2024)</h1>
-
+      <small class="dont-index">Source: <a href="https://github.com/bsvars/StealLikeBayes/blob/master/R/sample_variances_horseshoe.R" class="external-link"><code>R/sample_variances_horseshoe.R</code></a></small>
       <div class="d-none name"><code>sample_variances_horseshoe.Rd</code></div>
     </div>
 
@@ -141,7 +146,28 @@ Engineering, 303-307, &lt;doi:10.1109/ICCAE64891.2025.10980539&gt;</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu">sample_variances_horseshoe</span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">sample_variances_horseshoe</span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $V_i</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            [,1]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  0.8089962</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 13.5056860</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $theta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            [,1]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]  0.7234863</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] 12.0781516</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $zeta</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.118191</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $nu</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           [,1]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] 46.755885</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]  1.299946</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $varpi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 16.30788</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -150,7 +176,7 @@ Engineering, 303-307, &lt;doi:10.1109/ICCAE64891.2025.10980539&gt;</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li.</p>
+  <p>Developed by Tomasz Woźniak, Xiaolei Wang, Longcan Li, Jianying Shelly Xie, Filip Reierson, Kenyon Ng.</p>
 </div>
 
 <div class="pkgdown-footer-right">

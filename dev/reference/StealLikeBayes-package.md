@@ -1,4 +1,4 @@
-# A C++ compendium of Bayesian statistical routines for R packages
+# A Compendium of Bayesian Statistical Routines Written in C++
 
 This is a compendium of C++ routines useful for Bayesian statistics. We
 steal other people's C++ code, repurpose it, and export it so developers
@@ -17,13 +17,15 @@ StealLikeBayes!
 
 Useful links:
 
-- <http://bsvars.org/StealLikeBayes/>
+- <https://bsvars.org/StealLikeBayes/>
+
+- Report bugs at <https://github.com/bsvars/StealLikeBayes/issues>
 
 ## Author
 
 **Maintainer**: Tomasz Woźniak <wozniak.tom@pm.me>
 ([ORCID](https://orcid.org/0000-0003-2212-2378)) (contributions:
-rnorm1_precision_sampler, rgennorm)
+rmvnorm1_precision_sampler, rgennorm, rgig1)
 
 Authors:
 
@@ -34,3 +36,15 @@ Authors:
 - Longcan Li <longcando@outlook.com>
   ([ORCID](https://orcid.org/0009-0007-2190-768X)) (contributions:
   sample_variances_horseshoe)
+
+- Jianying Shelly Xie <shellyyinggxie@gmail.com>
+  ([ORCID](https://orcid.org/0009-0008-6451-6416)) (contributions:
+  sample_variances_normal_gamma)
+
+- Filip Reierson <filip.reierson@gmail.com>
+  ([ORCID](https://orcid.org/0009-0003-2393-5810)) (contributions:
+  rtmvnorm)
+
+- Kenyon Ng <kenyon.ng@gmail.com>
+  ([ORCID](https://orcid.org/0000-0002-6315-9831)) (contributions:
+  rtmvnorm_hmc)

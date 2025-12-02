@@ -91,5 +91,26 @@ Longcan Li <longcando@outlook.com>
 ## Examples
 
 ``` r
-result <- sample_variances_horseshoe( rep(0, 2), rep(0, 2), 1, rep(1, 2), 1)
+sample_variances_horseshoe( rep(0, 2), rep(0, 2), 1, rep(1, 2), 1)
+#> $V_i
+#>            [,1]
+#> [1,]  0.8089962
+#> [2,] 13.5056860
+#> 
+#> $theta
+#>            [,1]
+#> [1,]  0.7234863
+#> [2,] 12.0781516
+#> 
+#> $zeta
+#> [1] 1.118191
+#> 
+#> $nu
+#>           [,1]
+#> [1,] 46.755885
+#> [2,]  1.299946
+#> 
+#> $varpi
+#> [1] 16.30788
+#> 
 ```

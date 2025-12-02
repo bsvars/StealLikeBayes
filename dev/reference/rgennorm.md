@@ -47,7 +47,7 @@ rgennorm(n, X, S, nu, V, normalise = TRUE)
 - nu:
 
   a positive integer number with the shape parameter \\nu\\. **C++**: an
-  `arma::int` object.
+  `int` object.
 
 - V:
 
