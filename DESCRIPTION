@@ -1,8 +1,8 @@
 Package: StealLikeBayes
 Type: Package
 Title: A Compendium of Bayesian Statistical Routines Written in 'C++'
-Version: 1.0
-Date: 2025-11-26
+Version: 1.0.0.9000
+Date: 2025-12-03
 Maintainer: Tomasz Woźniak <wozniak.tom@pm.me>
 Authors@R: c(
     person(
