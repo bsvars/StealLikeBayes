@@ -10,6 +10,8 @@
   distribution
 - [`rhaar1()`](http://bsvars.org/StealLikeBayes/dev/reference/rhaar1.md)
   : Sample random matrices from Haar distribution
+- [`rig2()`](http://bsvars.org/StealLikeBayes/dev/reference/rig2.md) :
+  Sample from the inverted gamma-2 distribution
 - [`rmvnorm1_precision_sampler()`](http://bsvars.org/StealLikeBayes/dev/reference/rmvnorm1_precision_sampler.md)
   : Samples random draws from a multivariate normal distribution using
   the precision sampler by Chan & Jeliazkov (2009)

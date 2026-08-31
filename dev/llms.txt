@@ -124,6 +124,7 @@ and for **Linux:** install the standard development packages.
 You can install the **StealLikeBayes** package by running:
 
 ``` r
+
 install_packages("StealLikeBayes")
 ```
 
@@ -132,6 +133,7 @@ You can install the developer’s version of **StealLikeBayes** from its
 running:
 
 ``` r
+
 devtools::install_github("bsvars/StealLikeBayes")
 ```
 
@@ -157,6 +159,8 @@ providing resources that enabled collaborative development.
   distribution
 - [`rhaar1()`](http://bsvars.org/StealLikeBayes/dev/reference/rhaar1.md)
   : Sample random matrices from Haar distribution
+- [`rig2()`](http://bsvars.org/StealLikeBayes/dev/reference/rig2.md) :
+  Sample from the inverted gamma-2 distribution
 - [`rmvnorm1_precision_sampler()`](http://bsvars.org/StealLikeBayes/dev/reference/rmvnorm1_precision_sampler.md)
   : Samples random draws from a multivariate normal distribution using
   the precision sampler by Chan & Jeliazkov (2009)

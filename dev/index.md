@@ -124,6 +124,7 @@ and for **Linux:** install the standard development packages.
 You can install the **StealLikeBayes** package by running:
 
 ``` r
+
 install_packages("StealLikeBayes")
 ```
 
@@ -132,6 +133,7 @@ You can install the developer’s version of **StealLikeBayes** from its
 running:
 
 ``` r
+
 devtools::install_github("bsvars/StealLikeBayes")
 ```
 
