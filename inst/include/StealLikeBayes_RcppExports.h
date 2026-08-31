@@ -194,6 +194,27 @@ namespace StealLikeBayes {
         return Rcpp::as<arma::mat >(rcpp_result_gen);
     }
 
+    inline arma::vec rig2(const int n, const double s, const double nu) {
+        typedef SEXP(*Ptr_rig2)(SEXP,SEXP,SEXP);
+        static Ptr_rig2 p_rig2 = NULL;
+        if (p_rig2 == NULL) {
+            validateSignature("arma::vec(*rig2)(const int,const double,const double)");
+            p_rig2 = (Ptr_rig2)R_GetCCallable("StealLikeBayes", "_StealLikeBayes_rig2");
+        }
+        RObject rcpp_result_gen;
+        {
+            RNGScope RCPP_rngScope_gen;
+            rcpp_result_gen = p_rig2(Shield<SEXP>(Rcpp::wrap(n)), Shield<SEXP>(Rcpp::wrap(s)), Shield<SEXP>(Rcpp::wrap(nu)));
+        }
+        if (rcpp_result_gen.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
+        if (rcpp_result_gen.inherits("try-error"))
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
+        return Rcpp::as<arma::vec >(rcpp_result_gen);
+    }
+
     inline Rcpp::List cholesky_tridiagonal(const arma::vec& omega_diag, const double& omega_offdiag) {
         typedef SEXP(*Ptr_cholesky_tridiagonal)(SEXP,SEXP);
         static Ptr_cholesky_tridiagonal p_cholesky_tridiagonal = NULL;

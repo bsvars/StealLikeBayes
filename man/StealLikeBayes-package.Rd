@@ -27,15 +27,16 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: rmvnorm1_precision_sampler, rgennorm, rgig1)
+\strong{Maintainer}: Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: contributions: rmvnorm1_precision_sampler, rgennorm, rgig1, rig2)
 
 Authors:
 \itemize{
-  \item Xiaolei Wang \email{adamwang15@gmail.com} (\href{https://orcid.org/0009-0005-6192-9061}{ORCID}) (contributions: rhaar1)
-  \item Longcan Li \email{longcando@outlook.com} (\href{https://orcid.org/0009-0007-2190-768X}{ORCID}) (contributions: sample_variances_horseshoe)
-  \item Jianying Shelly Xie \email{shellyyinggxie@gmail.com} (\href{https://orcid.org/0009-0008-6451-6416}{ORCID}) (contributions: sample_variances_normal_gamma)
-  \item Filip Reierson \email{filip.reierson@gmail.com} (\href{https://orcid.org/0009-0003-2393-5810}{ORCID}) (contributions: rtmvnorm)
-  \item Kenyon Ng \email{kenyon.ng@gmail.com} (\href{https://orcid.org/0000-0002-6315-9831}{ORCID}) (contributions: rtmvnorm_hmc)
+  \item Tomasz Woźniak \email{wozniak.tom@pm.me} (\href{https://orcid.org/0000-0003-2212-2378}{ORCID}) (contributions: contributions: rmvnorm1_precision_sampler, rgennorm, rgig1, rig2)
+  \item Xiaolei Wang \email{adamwang15@gmail.com} (\href{https://orcid.org/0009-0005-6192-9061}{ORCID}) (contributions: contributions: rhaar1)
+  \item Longcan Li \email{longcando@outlook.com} (\href{https://orcid.org/0009-0007-2190-768X}{ORCID}) (contributions: contributions: sample_variances_horseshoe)
+  \item Jianying Shelly Xie \email{shellyyinggxie@gmail.com} (\href{https://orcid.org/0009-0008-6451-6416}{ORCID}) (contributions: contributions: sample_variances_normal_gamma)
+  \item Filip Reierson \email{filip.reierson@gmail.com} (\href{https://orcid.org/0009-0003-2393-5810}{ORCID}) (contributions: contributions: rtmvnorm)
+  \item Kenyon Ng \email{kenyon.ng@gmail.com} (\href{https://orcid.org/0000-0002-6315-9831}{ORCID}) (contributions: contributions: rtmvnorm_hmc)
 }
 
 }

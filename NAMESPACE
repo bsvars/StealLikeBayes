@@ -3,6 +3,7 @@
 export(rgennorm)
 export(rgig1)
 export(rhaar1)
+export(rig2)
 export(rmvnorm1_precision_sampler)
 export(rtmvnorm)
 export(rtmvnorm_hmc)
