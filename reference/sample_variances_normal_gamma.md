@@ -1,11 +1,12 @@
 # Samples variances of the Normal-Gamma prior distribution by Brown & Griffin (2010).
 
-This function samples variances from a Normal-Gamma prior distribution.
+This function samples variances as well as the hyper-parameters
+\\\vartheta_i\\ and \\\zeta\\ from a Normal-Gamma prior distribution.
 The prior distribution has a hierarchical structure where each element
 \\x_i\\ of a \\k\\-vector \\X\\ follows: \$\$x_i \sim N(0,\vartheta_i
 \zeta_j), \vartheta_i \sim G(a_j, a_j / 2) \text{, and } \zeta_j^{-1}
 \sim G(b,c)\$\$ for \\i=j=1,\dots,k\\. The hyperparameter \\a_j\\
-follows an i.i.d. discrete hyperprior with \\Pr(a_j = \tilde{a}\_r) =
+follows an i.i.d. discrete hyperprior with \\\Pr(a_j = \tilde{a}\_r) =
 p_r\\, where \\\tilde{a} = (\tilde{a}\_1, \dots, \tilde{a}\_R)'\\ is the
 vector of strictly positive support points. See Brown & Griffin (2010)
 and Gruber & Kastner (2025) for further details.
@@ -73,8 +74,17 @@ sample_variances_normal_gamma(
 
 ## Value
 
-A vector of variances of the Normal-Gamma prior distribution. **C++**:
-an `arma::vec` object.
+A \*\*list\*\* of C++ objects of class `Rcpp::List` containing the
+updated variance parameters. The elements are:
+
+- `V_i` A vector of variances of the Normal-Gamma prior distribution.
+  **R**: a \*\*numeric vector\*\*. **C++**: an `arma::vec` object.
+
+- `theta_tilde` An updated vector of \\\vartheta_i\\. **R**: a
+  \*\*numeric vector\*\*. **C++**: an `arma::vec` object.
+
+- `zeta`: An updated vector of \\\zeta_j\\. **R**: a \*\*positive
+  scalar\*\*. **C++**: an `double` object.
 
 ## Details
 
@@ -116,7 +126,17 @@ Jianying Shelly Xie <shellyyinggxie@gmail.com>
 
 ``` r
 sample_variances_normal_gamma(rep(0,2), rep(1,2), 1, 1, rep(1,2), 1, 1, TRUE, 1e-6)
-#>            [,1]
-#> [1,] 0.00437863
-#> [2,] 0.23291054
+#> $V_i
+#>             [,1]
+#> [1,] 0.004652411
+#> [2,] 0.071388125
+#> 
+#> $theta_tilde
+#>             [,1]
+#> [1,] 0.004652411
+#> [2,] 0.071388125
+#> 
+#> $zeta
+#> [1] 0.4160543
+#> 
 ```

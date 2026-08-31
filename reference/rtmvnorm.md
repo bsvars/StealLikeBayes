@@ -101,6 +101,6 @@ rtmvnorm(mean = matrix(c(0, 0), nrow = 1), sigma = diag(2),
          blc = diag(2), lower = matrix(c(-Inf, -Inf), nrow = 1), 
          upper = matrix(c(1, 1), nrow = 1), init = matrix(c(0, 0), 
          nrow = 1), burn = 10)
-#>           [,1]       [,2]
-#> [1,] -1.048713 0.03810289
+#>          [,1]      [,2]
+#> [1,] -1.61939 -1.055422
 ```

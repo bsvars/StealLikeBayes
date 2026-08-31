@@ -89,6 +89,6 @@ Algebra Using the RcppEigen Package. Journal of Statistical Software,
 
 ``` r
 rtmvnorm_hmc(1, c(0, 0), diag(2), c(0, 2), diag(2), c(1, -1), 1)
-#>           [,1]     [,2]
-#> [1,] 0.9463479 1.316826
+#>         [,1]    [,2]
+#> [1,] 0.77599 1.15209
 ```

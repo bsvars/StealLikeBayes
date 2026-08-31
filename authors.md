@@ -4,7 +4,7 @@
 
 - **Tomasz Woźniak**. Author, maintainer.
   [](https://orcid.org/0000-0003-2212-2378)  
-  contributions: rnorm1_precision_sampler, rgennorm
+  contributions: rmvnorm1_precision_sampler, rgennorm, rgig1, rig2
 
 - **Xiaolei Wang**. Author. [](https://orcid.org/0009-0005-6192-9061)  
   contributions: rhaar1
@@ -28,14 +28,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/bsvars/StealLikeBayes/blob/master/DESCRIPTION)
 
-Woźniak T, Wang X, Li L, Xie J, Reierson F, Ng K (2025).
+Woźniak T, Wang X, Li L, Xie J, Reierson F, Ng K (2026).
 *StealLikeBayes: A Compendium of Bayesian Statistical Routines Written
-in 'C++'*. R package version 1.0, <https://bsvars.org/StealLikeBayes/>.
+in 'C++'*. R package version 2.0, <https://bsvars.org/StealLikeBayes/>.
 
     @Manual{,
       title = {StealLikeBayes: A Compendium of Bayesian Statistical Routines Written in 'C++'},
       author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li and Jianying Shelly Xie and Filip Reierson and Kenyon Ng},
-      year = {2025},
-      note = {R package version 1.0},
+      year = {2026},
+      note = {R package version 2.0},
       url = {https://bsvars.org/StealLikeBayes/},
     }
