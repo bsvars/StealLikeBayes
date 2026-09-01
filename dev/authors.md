@@ -30,13 +30,13 @@ Source:
 
 Woźniak T, Wang X, Li L, Xie J, Reierson F, Ng K (2026).
 *StealLikeBayes: A Compendium of Bayesian Statistical Routines Written
-in 'C++'*. R package version 1.0.0.9000,
+in 'C++'*. R package version 2.0.0.9000,
 <https://bsvars.org/StealLikeBayes/>.
 
     @Manual{,
       title = {StealLikeBayes: A Compendium of Bayesian Statistical Routines Written in 'C++'},
       author = {Tomasz Woźniak and Xiaolei Wang and Longcan Li and Jianying Shelly Xie and Filip Reierson and Kenyon Ng},
       year = {2026},
-      note = {R package version 1.0.0.9000},
+      note = {R package version 2.0.0.9000},
       url = {https://bsvars.org/StealLikeBayes/},
     }
