@@ -26,7 +26,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/bsvars/StealLikeBayes/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/bsvars/StealLikeBayes/blob/v2.0/DESCRIPTION)
 
 Woźniak T, Wang X, Li L, Xie J, Reierson F, Ng K (2026).
 *StealLikeBayes: A Compendium of Bayesian Statistical Routines Written
