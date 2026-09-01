@@ -1,3 +1,5 @@
+# StealLikeBayes (development version)
+
 # StealLikeBayes 2.0
 
 A Compendium of Bayesian Statistical Routines Written in 'C++'
